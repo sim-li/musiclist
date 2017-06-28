@@ -1,22 +1,22 @@
-name := "Foo root project"
+name := "MusicList"
 
 scalaVersion in ThisBuild := "2.11.8"
 
 lazy val root = project.in(file(".")).
-  aggregate(fooJS, fooJVM).
+  aggregate(musicListJS, musicListJVM).
   settings(
     publish := {},
     publishLocal := {}
   )
 
-lazy val foo = crossProject.in(file(".")).
+lazy val musicList = crossProject.in(file(".")).
   settings(
     name := "foo",
     version := "0.1-SNAPSHOT"
   ).
   jvmSettings(
     libraryDependencies ++= {
-      mainClass in (Compile,run) := Some("de.co.lischka.restapi.Main")
+      mainClass in(Compile, run) := Some("de.co.lischka.restapi.Main")
       val akkaV = "10.0.0"
       val scalaTestV = "3.0.1"
       val slickVersion = "3.2.0-M2"
@@ -42,8 +42,32 @@ lazy val foo = crossProject.in(file(".")).
         "ru.yandex.qatools.embed" % "postgresql-embedded" % "1.15" % "test"
       )
     }).jsSettings(
-      // Add JS-specific settings here
+
+
+  libraryDependencies ++= {
+//    scalaVersion := "2.11.11"
+
+    enablePlugins(SriPlatformPlugin)
+
+    scalacOptions ++= Seq(
+      "-feature",
+      "-deprecation",
+      "-unchecked",
+      "-language:implicitConversions"
     )
 
-lazy val fooJVM = foo.jvm
-lazy val fooJS = foo.js
+    resolvers += Resolver.bintrayRepo("scalajs-react-interface", "maven")
+
+    Seq(
+      "scalajs-react-interface" %%% "core" % "2017.4.23-beta",
+      "scalajs-react-interface" %%% "mobile" % "2017.5.2-beta",
+      "scalajs-react-interface" %%% "universal" % "2017.5.2-beta",
+      "scalajs-react-interface" %%% "platform-config-ios" % "2017.4.23-beta"/* % ios*/,
+      "scalajs-react-interface" %%% "platform-config-android" % "2017.4.23-beta"/* % android*/,
+      "scalajs-react-interface" %%% "navigation" % "2017.5.2-beta"
+    )
+  }
+)
+
+lazy val musicListJVM = musicList.jvm
+lazy val musicListJS = musicList.js
