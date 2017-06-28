@@ -1,12 +1,10 @@
-# Scala.js cross compile example
+# MusicList
 
-This is an example on how to cross compile code to Scala.js and Scala JVM.
+Akka HTTP / Scala.js + Require Mobile App
 
-To try it out, launch sbt and type:
+Let's you share some music with your friends without going through
+the hassle of convincing them of any other platform than MusicList (permalink is the buzzword).
 
-    sbt> fooJS/run
-    sbt> fooJVM/run
+More coming soon.
 
-More information can be found in the
-[Scala.js documentation](http://www.scala-js.org/doc/sbt/cross-building.html) and in the [sbt-scalajs](http://www.scala-js.org/api/sbt-scalajs/latest/#org.scalajs.sbtplugin.cross.CrossProject) plugin documentation, including common pitfalls.
 
