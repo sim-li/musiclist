@@ -42,33 +42,6 @@ lazy val musicList = crossProject.in(file(".")).
         "ru.yandex.qatools.embed" % "postgresql-embedded" % "1.15" % "test"
       )
     })
-//  .jsSettings(
-//
-//
-//  libraryDependencies ++= {
-////    scalaVersion := "2.11.11"
-//
-//    enablePlugins(SriPlatformPlugin)
-//
-//    scalacOptions ++= Seq(
-//      "-feature",
-//      "-deprecation",
-//      "-unchecked",
-//      "-language:implicitConversions"
-//    )
-//
-//    resolvers += Resolver.bintrayRepo("scalajs-react-interface", "maven")
-//
-//    Seq(
-//      "scalajs-react-interface" %%% "core" % "2017.4.23-beta",
-//      "scalajs-react-interface" %%% "mobile" % "2017.5.2-beta",
-//      "scalajs-react-interface" %%% "universal" % "2017.5.2-beta",
-////      "scalajs-react-interface" %%% "platform-config-ios" % "2017.4.23-beta"/* % ios*/,
-////      "scalajs-react-interface" %%% "platform-config-android" % "2017.4.23-beta"/* % android*/,
-//      "scalajs-react-interface" %%% "navigation" % "2017.5.2-beta"
-//    )
-//  }
-//)
 
 lazy val musicListJVM = musicList.jvm
 lazy val musicListJS = musicList.js
