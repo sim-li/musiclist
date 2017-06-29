@@ -1,4 +1,4 @@
-package de.co.lischka.musiclist.restapi.models
+package co.lischka.musiclist.restapi.models
 
 case class UserEntity(id: Option[Long] = None, username: String, password: String) {
   require(!username.isEmpty, "username.empty")

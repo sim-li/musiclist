@@ -1,4 +1,4 @@
-package de.co.lischka.restapi.utils
+package co.lischka.musiclist.restapi.utils
 
 import com.typesafe.config.ConfigFactory
 

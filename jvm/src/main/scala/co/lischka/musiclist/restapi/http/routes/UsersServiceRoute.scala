@@ -1,12 +1,12 @@
-package de.co.lischka.restapi.http.routes
+package co.lischka.musiclist.restapi.http.routes
 
 import akka.http.scaladsl.model.StatusCodes
 import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.server.PathMatchers.IntNumber
 import de.heikoseeberger.akkahttpcirce.CirceSupport
-import de.co.lischka.restapi.http.SecurityDirectives
-import de.co.lischka.restapi.models.UserEntityUpdate
-import de.co.lischka.restapi.services.{AuthService, UsersService}
+import co.lischka.musiclist.restapi.http.SecurityDirectives
+import co.lischka.musiclist.restapi.models.UserEntityUpdate
+import co.lischka.musiclist.restapi.services.{AuthService, UsersService}
 import io.circe.generic.auto._
 import io.circe.syntax._
 

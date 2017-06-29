@@ -16,9 +16,9 @@ class HomeScreen extends NavigationScreenComponentNoPS {
     View(style = styles.container)(
       getBlock(() =>
                  navigation.navigate[ScreenWithParams](new Params {
-                   override val title: String = "Second title"
+                   override val title: String = "Parse some tracks"
                  }),
-               "Screen With Params"),
+               "Get it on"),
       getBlock(() => navigation.navigate[ScreenWithCustomRightButton],
                "Screen With Right Button"),
       getBlock(() => navigation.navigate[LazyLoadScreen], "LazyLoad Screen"),

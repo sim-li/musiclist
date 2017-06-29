@@ -1,9 +1,9 @@
-package de.co.lischka.restapi.http
+package co.lischka.musiclist.restapi.http
 
 import akka.http.scaladsl.server.directives.{ RouteDirectives, BasicDirectives, HeaderDirectives, FutureDirectives }
 import akka.http.scaladsl.server.Directive1
-import de.co.lischka.restapi.models.UserEntity
-import de.co.lischka.restapi.services.AuthService
+import co.lischka.musiclist.restapi.models.UserEntity
+import co.lischka.musiclist.restapi.services.AuthService
 
 trait SecurityDirectives {
 

@@ -1,4 +1,4 @@
-package de.co.lischka.restapi.models
+package co.lischka.musiclist.restapi.models
 
 import java.util.UUID
 

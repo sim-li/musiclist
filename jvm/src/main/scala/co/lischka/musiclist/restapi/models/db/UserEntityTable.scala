@@ -1,7 +1,7 @@
-package de.co.lischka.restapi.models.db
+package co.lischka.musiclist.restapi.models.db
 
-import de.co.lischka.restapi.models.UserEntity
-import de.co.lischka.restapi.utils.DatabaseService
+import co.lischka.musiclist.restapi.models.UserEntity
+import co.lischka.musiclist.restapi.utils.DatabaseService
 
 trait UserEntityTable {
 

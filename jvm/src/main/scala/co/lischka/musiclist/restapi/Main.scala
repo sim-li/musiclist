@@ -1,12 +1,12 @@
-package de.co.lischka.restapi
+package co.lischka.musiclist.restapi
 
 import akka.actor.ActorSystem
 import akka.event.{Logging, LoggingAdapter}
 import akka.http.scaladsl.Http
 import akka.stream.ActorMaterializer
-import de.co.lischka.restapi.http.HttpService
-import de.co.lischka.restapi.services.{AuthService, UsersService}
-import de.co.lischka.restapi.utils.{Config, DatabaseService, FlywayService}
+import co.lischka.musiclist.restapi.http.HttpService
+import co.lischka.musiclist.restapi.services.{AuthService, UsersService}
+import co.lischka.musiclist.restapi.utils.{Config, DatabaseService, FlywayService}
 import scala.concurrent.ExecutionContext
 
 object Main extends App with Config {

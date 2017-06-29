@@ -16,7 +16,7 @@ lazy val musicList = crossProject.in(file(".")).
   ).
   jvmSettings(
     libraryDependencies ++= {
-      mainClass in(Compile, run) := Some("de.co.lischka.restapi.Main")
+      mainClass in(Compile, run) := Some("co.lischka.musiclist.restapi.Main")
       val akkaV = "10.0.0"
       val scalaTestV = "3.0.1"
       val slickVersion = "3.2.0-M2"

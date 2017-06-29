@@ -1,9 +1,9 @@
-package de.co.lischka.restapi.http
+package co.lischka.musiclist.restapi.http
 
 import akka.http.scaladsl.server.Directives._
-import de.co.lischka.restapi.http.routes.{AuthServiceRoute, UsersServiceRoute}
-import de.co.lischka.restapi.services.{AuthService, UsersService}
-import de.co.lischka.restapi.utils.CorsSupport
+import co.lischka.musiclist.restapi.http.routes.{AuthServiceRoute, UsersServiceRoute}
+import co.lischka.musiclist.restapi.services.{AuthService, UsersService}
+import co.lischka.musiclist.restapi.utils.CorsSupport
 import scala.concurrent.ExecutionContext
 
 class HttpService(usersService: UsersService,

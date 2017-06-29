@@ -1,8 +1,8 @@
-package de.co.lischka.restapi.services
+package co.lischka.musiclist.restapi.services
 
-import de.co.lischka.restapi.models.db.TokenEntityTable
-import de.co.lischka.restapi.models.{TokenEntity, UserEntity}
-import de.co.lischka.restapi.utils.DatabaseService
+import co.lischka.musiclist.restapi.models.db.TokenEntityTable
+import co.lischka.musiclist.restapi.models.{TokenEntity, UserEntity}
+import co.lischka.musiclist.restapi.utils.DatabaseService
 
 import scala.concurrent.{ExecutionContext, Future}
 

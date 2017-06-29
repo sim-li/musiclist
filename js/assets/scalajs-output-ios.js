@@ -4746,7 +4746,7 @@ $c_Lco_lischka_musiclist_components_HomeScreen$$anonfun$render$1.prototype.apply
   $as_Lsri_navigation_NavigationCtrl$(this.$$outer$3.navigation);
   var $this = {};
   $this.title = null;
-  $this.title = "Second title";
+  $this.title = "Parse some tracks";
   var navigation = this.$$outer$3.navigationJS;
   return $uZ(navigation.navigate($d_Lco_lischka_musiclist_components_ScreenWithParams.getClassOf().getName__T(), $this))
 });
@@ -5422,7 +5422,7 @@ var $d_Lco_lischka_musiclist_components_AboutScreen = new $TypeData().initClass(
 }));
 function $s_Lco_lischka_musiclist_components_HomeScreen__render__Lco_lischka_musiclist_components_HomeScreen__Lsri_core_ReactElement($this) {
   var a = $m_Lco_lischka_musiclist_components_HomeScreen$styles$().container$1;
-  var a$1 = $this.getBlock(new $c_Lco_lischka_musiclist_components_HomeScreen$$anonfun$render$1().init___Lco_lischka_musiclist_components_HomeScreen($this), "Screen With Params");
+  var a$1 = $this.getBlock(new $c_Lco_lischka_musiclist_components_HomeScreen$$anonfun$render$1().init___Lco_lischka_musiclist_components_HomeScreen($this), "Get it on");
   var a$2 = $this.getBlock(new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(arg$outer) {
     return (function() {
       $as_Lsri_navigation_NavigationCtrl$(arg$outer.navigation);
