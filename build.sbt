@@ -62,8 +62,8 @@ lazy val musicList = crossProject.in(file(".")).
       "scalajs-react-interface" %%% "core" % "2017.4.23-beta",
       "scalajs-react-interface" %%% "mobile" % "2017.5.2-beta",
       "scalajs-react-interface" %%% "universal" % "2017.5.2-beta",
-      "scalajs-react-interface" %%% "platform-config-ios" % "2017.4.23-beta"/* % ios*/,
-      "scalajs-react-interface" %%% "platform-config-android" % "2017.4.23-beta"/* % android*/,
+//      "scalajs-react-interface" %%% "platform-config-ios" % "2017.4.23-beta"/* % ios*/,
+//      "scalajs-react-interface" %%% "platform-config-android" % "2017.4.23-beta"/* % android*/,
       "scalajs-react-interface" %%% "navigation" % "2017.5.2-beta"
     )
   }

@@ -1373,21 +1373,21 @@ function $s_scm_ResizableArray$class__$$init$__scm_ResizableArray__V($$this) {
   $$this.size0$6 = 0
 }
 /** @constructor */
-function $c_Lde_co_lischka_components_package$() {
+function $c_Lco_lischka_musiclist_components_package$() {
   $c_O.call(this);
   this.root$1 = null
 }
-$c_Lde_co_lischka_components_package$.prototype = new $h_O();
-$c_Lde_co_lischka_components_package$.prototype.constructor = $c_Lde_co_lischka_components_package$;
+$c_Lco_lischka_musiclist_components_package$.prototype = new $h_O();
+$c_Lco_lischka_musiclist_components_package$.prototype.constructor = $c_Lco_lischka_musiclist_components_package$;
 /** @constructor */
-function $h_Lde_co_lischka_components_package$() {
+function $h_Lco_lischka_musiclist_components_package$() {
   /*<skip>*/
 }
-$h_Lde_co_lischka_components_package$.prototype = $c_Lde_co_lischka_components_package$.prototype;
-$c_Lde_co_lischka_components_package$.prototype.init___ = (function() {
-  $n_Lde_co_lischka_components_package$ = this;
-  var a = $m_Lde_co_lischka_components_GlobalStyles$().defaultCardStyle$1;
-  var a$1 = $m_Lde_co_lischka_components_GlobalStyles$().defaultHeader$1;
+$h_Lco_lischka_musiclist_components_package$.prototype = $c_Lco_lischka_musiclist_components_package$.prototype;
+$c_Lco_lischka_musiclist_components_package$.prototype.init___ = (function() {
+  $n_Lco_lischka_musiclist_components_package$ = this;
+  var a = $m_Lco_lischka_musiclist_components_GlobalStyles$().defaultCardStyle$1;
+  var a$1 = $m_Lco_lischka_musiclist_components_GlobalStyles$().defaultHeader$1;
   var fresh$macro$2 = {};
   fresh$macro$2.headerStyle = a$1;
   fresh$macro$2.headerTintColor = "white";
@@ -1400,19 +1400,19 @@ $c_Lde_co_lischka_components_package$.prototype.init___ = (function() {
   $m_Lsri_navigation_package$();
   $m_Lsri_navigation_package$();
   $m_Lsri_navigation_package$();
-  var constructor = $a_Lde_co_lischka_components_HomeScreen();
-  var name = $d_Lde_co_lischka_components_HomeScreen.getClassOf().getName__T();
+  var constructor = $a_Lco_lischka_musiclist_components_HomeScreen();
+  var name = $d_Lco_lischka_musiclist_components_HomeScreen.getClassOf().getName__T();
   var fresh$macro$9 = {
     "screen": constructor
   };
   fresh$macro$9.navigationOptions = fresh$macro$2$1;
   var jsx$4 = new $c_T2().init___O__O(name, fresh$macro$9);
-  var a$2 = new $c_Lde_co_lischka_components_package$$anonfun$2().init___();
+  var a$2 = new $c_Lco_lischka_musiclist_components_package$$anonfun$2().init___();
   $m_Lsri_navigation_package$();
   $m_Lsri_navigation_package$();
   $m_Lsri_navigation_package$();
-  var constructor$1 = $a_Lde_co_lischka_components_ScreenWithParams();
-  var name$1 = $d_Lde_co_lischka_components_ScreenWithParams.getClassOf().getName__T();
+  var constructor$1 = $a_Lco_lischka_musiclist_components_ScreenWithParams();
+  var name$1 = $d_Lco_lischka_musiclist_components_ScreenWithParams.getClassOf().getName__T();
   var fresh$macro$9$1 = {
     "screen": constructor$1
   };
@@ -1442,8 +1442,8 @@ $c_Lde_co_lischka_components_package$.prototype.init___ = (function() {
   $m_Lsri_navigation_package$();
   $m_Lsri_navigation_package$();
   $m_Lsri_navigation_package$();
-  var constructor$2 = $a_Lde_co_lischka_components_ScreenWithCustomRightButton();
-  var name$2 = $d_Lde_co_lischka_components_ScreenWithCustomRightButton.getClassOf().getName__T();
+  var constructor$2 = $a_Lco_lischka_musiclist_components_ScreenWithCustomRightButton();
+  var name$2 = $d_Lco_lischka_musiclist_components_ScreenWithCustomRightButton.getClassOf().getName__T();
   var fresh$macro$9$2 = {
     "screen": constructor$2
   };
@@ -1454,8 +1454,8 @@ $c_Lde_co_lischka_components_package$.prototype.init___ = (function() {
   $m_Lsri_navigation_package$();
   $m_Lsri_navigation_package$();
   $m_Lsri_navigation_package$();
-  var constructor$3 = $a_Lde_co_lischka_components_LazyLoadScreen();
-  var name$3 = $d_Lde_co_lischka_components_LazyLoadScreen.getClassOf().getName__T();
+  var constructor$3 = $a_Lco_lischka_musiclist_components_LazyLoadScreen();
+  var name$3 = $d_Lco_lischka_musiclist_components_LazyLoadScreen.getClassOf().getName__T();
   var fresh$macro$9$3 = {
     "screen": constructor$3
   };
@@ -1466,8 +1466,8 @@ $c_Lde_co_lischka_components_package$.prototype.init___ = (function() {
   $m_Lsri_navigation_package$();
   $m_Lsri_navigation_package$();
   $m_Lsri_navigation_package$();
-  var constructor$4 = $a_Lde_co_lischka_components_AboutScreen();
-  var name$4 = $d_Lde_co_lischka_components_AboutScreen.getClassOf().getName__T();
+  var constructor$4 = $a_Lco_lischka_musiclist_components_AboutScreen();
+  var name$4 = $d_Lco_lischka_musiclist_components_AboutScreen.getClassOf().getName__T();
   var fresh$macro$9$4 = {
     "screen": constructor$4
   };
@@ -1476,19 +1476,19 @@ $c_Lde_co_lischka_components_package$.prototype.init___ = (function() {
   this.root$1 = (0, $i_react$002dnavigation.StackNavigator)($m_sjs_js_Dictionary$().apply__sc_Seq__sjs_js_Dictionary(routes), fresh$macro$18);
   return this
 });
-var $d_Lde_co_lischka_components_package$ = new $TypeData().initClass({
-  Lde_co_lischka_components_package$: 0
-}, false, "de.co.lischka.components.package$", {
-  Lde_co_lischka_components_package$: 1,
+var $d_Lco_lischka_musiclist_components_package$ = new $TypeData().initClass({
+  Lco_lischka_musiclist_components_package$: 0
+}, false, "co.lischka.musiclist.components.package$", {
+  Lco_lischka_musiclist_components_package$: 1,
   O: 1
 });
-$c_Lde_co_lischka_components_package$.prototype.$classData = $d_Lde_co_lischka_components_package$;
-var $n_Lde_co_lischka_components_package$ = (void 0);
-function $m_Lde_co_lischka_components_package$() {
-  if ((!$n_Lde_co_lischka_components_package$)) {
-    $n_Lde_co_lischka_components_package$ = new $c_Lde_co_lischka_components_package$().init___()
+$c_Lco_lischka_musiclist_components_package$.prototype.$classData = $d_Lco_lischka_musiclist_components_package$;
+var $n_Lco_lischka_musiclist_components_package$ = (void 0);
+function $m_Lco_lischka_musiclist_components_package$() {
+  if ((!$n_Lco_lischka_musiclist_components_package$)) {
+    $n_Lco_lischka_musiclist_components_package$ = new $c_Lco_lischka_musiclist_components_package$().init___()
   };
-  return $n_Lde_co_lischka_components_package$
+  return $n_Lco_lischka_musiclist_components_package$
 }
 /** @constructor */
 function $c_Lsri_core_JSState$() {
@@ -2409,20 +2409,20 @@ function $m_sr_Statics$() {
   return $n_sr_Statics$
 }
 /** @constructor */
-function $c_Lde_co_lischka_MobileApp$() {
+function $c_Lco_lischka_musiclist_MobileApp$() {
   $c_O.call(this)
 }
-$c_Lde_co_lischka_MobileApp$.prototype = new $h_O();
-$c_Lde_co_lischka_MobileApp$.prototype.constructor = $c_Lde_co_lischka_MobileApp$;
+$c_Lco_lischka_musiclist_MobileApp$.prototype = new $h_O();
+$c_Lco_lischka_musiclist_MobileApp$.prototype.constructor = $c_Lco_lischka_musiclist_MobileApp$;
 /** @constructor */
-function $h_Lde_co_lischka_MobileApp$() {
+function $h_Lco_lischka_musiclist_MobileApp$() {
   /*<skip>*/
 }
-$h_Lde_co_lischka_MobileApp$.prototype = $c_Lde_co_lischka_MobileApp$.prototype;
-$c_Lde_co_lischka_MobileApp$.prototype.init___ = (function() {
+$h_Lco_lischka_musiclist_MobileApp$.prototype = $c_Lco_lischka_musiclist_MobileApp$.prototype;
+$c_Lco_lischka_musiclist_MobileApp$.prototype.init___ = (function() {
   return this
 });
-$c_Lde_co_lischka_MobileApp$.prototype.main__V = (function() {
+$c_Lco_lischka_musiclist_MobileApp$.prototype.main__V = (function() {
   var v = $g.Symbol;
   if ((!(v === (void 0)))) {
     var v$1 = $g.Symbol["for"];
@@ -2431,30 +2431,30 @@ $c_Lde_co_lischka_MobileApp$.prototype.main__V = (function() {
     var jsx$1 = false
   };
   $g.REACT_ELEMENT_TYPE = (jsx$1 ? $g.Symbol["for"]("react.element") : 60103);
-  $i_react$002dnative.AppRegistry.registerComponent("musictest", (function() {
-    return $m_Lde_co_lischka_components_package$().root$1
+  $i_react$002dnative.AppRegistry.registerComponent("musiclist", (function() {
+    return $m_Lco_lischka_musiclist_components_package$().root$1
   }))
 });
-$c_Lde_co_lischka_MobileApp$.prototype.$$js$exported$meth$main__O = (function() {
+$c_Lco_lischka_musiclist_MobileApp$.prototype.$$js$exported$meth$main__O = (function() {
   this.main__V()
 });
-$c_Lde_co_lischka_MobileApp$.prototype.main = (function() {
+$c_Lco_lischka_musiclist_MobileApp$.prototype.main = (function() {
   return this.$$js$exported$meth$main__O()
 });
-var $d_Lde_co_lischka_MobileApp$ = new $TypeData().initClass({
-  Lde_co_lischka_MobileApp$: 0
-}, false, "de.co.lischka.MobileApp$", {
-  Lde_co_lischka_MobileApp$: 1,
+var $d_Lco_lischka_musiclist_MobileApp$ = new $TypeData().initClass({
+  Lco_lischka_musiclist_MobileApp$: 0
+}, false, "co.lischka.musiclist.MobileApp$", {
+  Lco_lischka_musiclist_MobileApp$: 1,
   O: 1,
   sjs_js_JSApp: 1
 });
-$c_Lde_co_lischka_MobileApp$.prototype.$classData = $d_Lde_co_lischka_MobileApp$;
-var $n_Lde_co_lischka_MobileApp$ = (void 0);
-function $m_Lde_co_lischka_MobileApp$() {
-  if ((!$n_Lde_co_lischka_MobileApp$)) {
-    $n_Lde_co_lischka_MobileApp$ = new $c_Lde_co_lischka_MobileApp$().init___()
+$c_Lco_lischka_musiclist_MobileApp$.prototype.$classData = $d_Lco_lischka_musiclist_MobileApp$;
+var $n_Lco_lischka_musiclist_MobileApp$ = (void 0);
+function $m_Lco_lischka_musiclist_MobileApp$() {
+  if ((!$n_Lco_lischka_musiclist_MobileApp$)) {
+    $n_Lco_lischka_musiclist_MobileApp$ = new $c_Lco_lischka_musiclist_MobileApp$().init___()
   };
-  return $n_Lde_co_lischka_MobileApp$
+  return $n_Lco_lischka_musiclist_MobileApp$
 }
 function $is_Lsri_core_package$$eq$colon$bang$eq(obj) {
   return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lsri_core_package$$eq$colon$bang$eq)))
@@ -2809,21 +2809,21 @@ var $d_sr_IntRef = new $TypeData().initClass({
 });
 $c_sr_IntRef.prototype.$classData = $d_sr_IntRef;
 /** @constructor */
-function $c_Lde_co_lischka_components_GlobalStyles$() {
+function $c_Lco_lischka_musiclist_components_GlobalStyles$() {
   $c_O.call(this);
   this.wholeContainer$1 = null;
   this.defaultHeader$1 = null;
   this.defaultCardStyle$1 = null
 }
-$c_Lde_co_lischka_components_GlobalStyles$.prototype = new $h_O();
-$c_Lde_co_lischka_components_GlobalStyles$.prototype.constructor = $c_Lde_co_lischka_components_GlobalStyles$;
+$c_Lco_lischka_musiclist_components_GlobalStyles$.prototype = new $h_O();
+$c_Lco_lischka_musiclist_components_GlobalStyles$.prototype.constructor = $c_Lco_lischka_musiclist_components_GlobalStyles$;
 /** @constructor */
-function $h_Lde_co_lischka_components_GlobalStyles$() {
+function $h_Lco_lischka_musiclist_components_GlobalStyles$() {
   /*<skip>*/
 }
-$h_Lde_co_lischka_components_GlobalStyles$.prototype = $c_Lde_co_lischka_components_GlobalStyles$.prototype;
-$c_Lde_co_lischka_components_GlobalStyles$.prototype.init___ = (function() {
-  $n_Lde_co_lischka_components_GlobalStyles$ = this;
+$h_Lco_lischka_musiclist_components_GlobalStyles$.prototype = $c_Lco_lischka_musiclist_components_GlobalStyles$.prototype;
+$c_Lco_lischka_musiclist_components_GlobalStyles$.prototype.init___ = (function() {
+  $n_Lco_lischka_musiclist_components_GlobalStyles$ = this;
   var fresh$macro$30 = {};
   fresh$macro$30.flex = 1;
   fresh$macro$30.padding = 20;
@@ -2839,38 +2839,38 @@ $c_Lde_co_lischka_components_GlobalStyles$.prototype.init___ = (function() {
   this.defaultCardStyle$1 = value$2;
   return this
 });
-var $d_Lde_co_lischka_components_GlobalStyles$ = new $TypeData().initClass({
-  Lde_co_lischka_components_GlobalStyles$: 0
-}, false, "de.co.lischka.components.GlobalStyles$", {
-  Lde_co_lischka_components_GlobalStyles$: 1,
+var $d_Lco_lischka_musiclist_components_GlobalStyles$ = new $TypeData().initClass({
+  Lco_lischka_musiclist_components_GlobalStyles$: 0
+}, false, "co.lischka.musiclist.components.GlobalStyles$", {
+  Lco_lischka_musiclist_components_GlobalStyles$: 1,
   O: 1,
   Lsri_universal_styles_UniversalStyleSheet: 1,
   Lsri_universal_styles_UniversalStyleConstants: 1
 });
-$c_Lde_co_lischka_components_GlobalStyles$.prototype.$classData = $d_Lde_co_lischka_components_GlobalStyles$;
-var $n_Lde_co_lischka_components_GlobalStyles$ = (void 0);
-function $m_Lde_co_lischka_components_GlobalStyles$() {
-  if ((!$n_Lde_co_lischka_components_GlobalStyles$)) {
-    $n_Lde_co_lischka_components_GlobalStyles$ = new $c_Lde_co_lischka_components_GlobalStyles$().init___()
+$c_Lco_lischka_musiclist_components_GlobalStyles$.prototype.$classData = $d_Lco_lischka_musiclist_components_GlobalStyles$;
+var $n_Lco_lischka_musiclist_components_GlobalStyles$ = (void 0);
+function $m_Lco_lischka_musiclist_components_GlobalStyles$() {
+  if ((!$n_Lco_lischka_musiclist_components_GlobalStyles$)) {
+    $n_Lco_lischka_musiclist_components_GlobalStyles$ = new $c_Lco_lischka_musiclist_components_GlobalStyles$().init___()
   };
-  return $n_Lde_co_lischka_components_GlobalStyles$
+  return $n_Lco_lischka_musiclist_components_GlobalStyles$
 }
 /** @constructor */
-function $c_Lde_co_lischka_components_HomeScreen$styles$() {
+function $c_Lco_lischka_musiclist_components_HomeScreen$styles$() {
   $c_O.call(this);
   this.container$1 = null;
   this.block$1 = null;
   this.blockText$1 = null
 }
-$c_Lde_co_lischka_components_HomeScreen$styles$.prototype = new $h_O();
-$c_Lde_co_lischka_components_HomeScreen$styles$.prototype.constructor = $c_Lde_co_lischka_components_HomeScreen$styles$;
+$c_Lco_lischka_musiclist_components_HomeScreen$styles$.prototype = new $h_O();
+$c_Lco_lischka_musiclist_components_HomeScreen$styles$.prototype.constructor = $c_Lco_lischka_musiclist_components_HomeScreen$styles$;
 /** @constructor */
-function $h_Lde_co_lischka_components_HomeScreen$styles$() {
+function $h_Lco_lischka_musiclist_components_HomeScreen$styles$() {
   /*<skip>*/
 }
-$h_Lde_co_lischka_components_HomeScreen$styles$.prototype = $c_Lde_co_lischka_components_HomeScreen$styles$.prototype;
-$c_Lde_co_lischka_components_HomeScreen$styles$.prototype.init___ = (function() {
-  $n_Lde_co_lischka_components_HomeScreen$styles$ = this;
+$h_Lco_lischka_musiclist_components_HomeScreen$styles$.prototype = $c_Lco_lischka_musiclist_components_HomeScreen$styles$.prototype;
+$c_Lco_lischka_musiclist_components_HomeScreen$styles$.prototype.init___ = (function() {
+  $n_Lco_lischka_musiclist_components_HomeScreen$styles$ = this;
   var fresh$macro$30 = {};
   fresh$macro$30.flex = 1;
   fresh$macro$30.padding = 20;
@@ -2907,21 +2907,21 @@ $c_Lde_co_lischka_components_HomeScreen$styles$.prototype.init___ = (function() 
   this.blockText$1 = value$2;
   return this
 });
-var $d_Lde_co_lischka_components_HomeScreen$styles$ = new $TypeData().initClass({
-  Lde_co_lischka_components_HomeScreen$styles$: 0
-}, false, "de.co.lischka.components.HomeScreen$styles$", {
-  Lde_co_lischka_components_HomeScreen$styles$: 1,
+var $d_Lco_lischka_musiclist_components_HomeScreen$styles$ = new $TypeData().initClass({
+  Lco_lischka_musiclist_components_HomeScreen$styles$: 0
+}, false, "co.lischka.musiclist.components.HomeScreen$styles$", {
+  Lco_lischka_musiclist_components_HomeScreen$styles$: 1,
   O: 1,
   Lsri_universal_styles_UniversalStyleSheet: 1,
   Lsri_universal_styles_UniversalStyleConstants: 1
 });
-$c_Lde_co_lischka_components_HomeScreen$styles$.prototype.$classData = $d_Lde_co_lischka_components_HomeScreen$styles$;
-var $n_Lde_co_lischka_components_HomeScreen$styles$ = (void 0);
-function $m_Lde_co_lischka_components_HomeScreen$styles$() {
-  if ((!$n_Lde_co_lischka_components_HomeScreen$styles$)) {
-    $n_Lde_co_lischka_components_HomeScreen$styles$ = new $c_Lde_co_lischka_components_HomeScreen$styles$().init___()
+$c_Lco_lischka_musiclist_components_HomeScreen$styles$.prototype.$classData = $d_Lco_lischka_musiclist_components_HomeScreen$styles$;
+var $n_Lco_lischka_musiclist_components_HomeScreen$styles$ = (void 0);
+function $m_Lco_lischka_musiclist_components_HomeScreen$styles$() {
+  if ((!$n_Lco_lischka_musiclist_components_HomeScreen$styles$)) {
+    $n_Lco_lischka_musiclist_components_HomeScreen$styles$ = new $c_Lco_lischka_musiclist_components_HomeScreen$styles$().init___()
   };
-  return $n_Lde_co_lischka_components_HomeScreen$styles$
+  return $n_Lco_lischka_musiclist_components_HomeScreen$styles$
 }
 var $d_jl_Boolean = new $TypeData().initClass({
   jl_Boolean: 0
@@ -4001,24 +4001,24 @@ function $h_sr_AbstractFunction0$mcZ$sp() {
 }
 $h_sr_AbstractFunction0$mcZ$sp.prototype = $c_sr_AbstractFunction0$mcZ$sp.prototype;
 /** @constructor */
-function $c_Lde_co_lischka_components_LazyLoadScreen$State() {
+function $c_Lco_lischka_musiclist_components_LazyLoadScreen$State() {
   $c_O.call(this);
   this.loading$1 = false
 }
-$c_Lde_co_lischka_components_LazyLoadScreen$State.prototype = new $h_O();
-$c_Lde_co_lischka_components_LazyLoadScreen$State.prototype.constructor = $c_Lde_co_lischka_components_LazyLoadScreen$State;
+$c_Lco_lischka_musiclist_components_LazyLoadScreen$State.prototype = new $h_O();
+$c_Lco_lischka_musiclist_components_LazyLoadScreen$State.prototype.constructor = $c_Lco_lischka_musiclist_components_LazyLoadScreen$State;
 /** @constructor */
-function $h_Lde_co_lischka_components_LazyLoadScreen$State() {
+function $h_Lco_lischka_musiclist_components_LazyLoadScreen$State() {
   /*<skip>*/
 }
-$h_Lde_co_lischka_components_LazyLoadScreen$State.prototype = $c_Lde_co_lischka_components_LazyLoadScreen$State.prototype;
-$c_Lde_co_lischka_components_LazyLoadScreen$State.prototype.productPrefix__T = (function() {
+$h_Lco_lischka_musiclist_components_LazyLoadScreen$State.prototype = $c_Lco_lischka_musiclist_components_LazyLoadScreen$State.prototype;
+$c_Lco_lischka_musiclist_components_LazyLoadScreen$State.prototype.productPrefix__T = (function() {
   return "State"
 });
-$c_Lde_co_lischka_components_LazyLoadScreen$State.prototype.productArity__I = (function() {
+$c_Lco_lischka_musiclist_components_LazyLoadScreen$State.prototype.productArity__I = (function() {
   return 1
 });
-$c_Lde_co_lischka_components_LazyLoadScreen$State.prototype.productElement__I__O = (function(x$1) {
+$c_Lco_lischka_musiclist_components_LazyLoadScreen$State.prototype.productElement__I__O = (function(x$1) {
   switch (x$1) {
     case 0: {
       return this.loading$1;
@@ -4029,62 +4029,62 @@ $c_Lde_co_lischka_components_LazyLoadScreen$State.prototype.productElement__I__O
     }
   }
 });
-$c_Lde_co_lischka_components_LazyLoadScreen$State.prototype.toString__T = (function() {
+$c_Lco_lischka_musiclist_components_LazyLoadScreen$State.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
-$c_Lde_co_lischka_components_LazyLoadScreen$State.prototype.hashCode__I = (function() {
+$c_Lco_lischka_musiclist_components_LazyLoadScreen$State.prototype.hashCode__I = (function() {
   var acc = (-889275714);
   acc = $m_sr_Statics$().mix__I__I__I(acc, (this.loading$1 ? 1231 : 1237));
   return $m_sr_Statics$().finalizeHash__I__I__I(acc, 1)
 });
-$c_Lde_co_lischka_components_LazyLoadScreen$State.prototype.productIterator__sc_Iterator = (function() {
+$c_Lco_lischka_musiclist_components_LazyLoadScreen$State.prototype.productIterator__sc_Iterator = (function() {
   return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
 });
-$c_Lde_co_lischka_components_LazyLoadScreen$State.prototype.init___Z = (function(loading) {
+$c_Lco_lischka_musiclist_components_LazyLoadScreen$State.prototype.init___Z = (function(loading) {
   this.loading$1 = loading;
   return this
 });
-function $is_Lde_co_lischka_components_LazyLoadScreen$State(obj) {
-  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lde_co_lischka_components_LazyLoadScreen$State)))
+function $is_Lco_lischka_musiclist_components_LazyLoadScreen$State(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lco_lischka_musiclist_components_LazyLoadScreen$State)))
 }
-function $as_Lde_co_lischka_components_LazyLoadScreen$State(obj) {
-  return (($is_Lde_co_lischka_components_LazyLoadScreen$State(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "de.co.lischka.components.LazyLoadScreen$State"))
+function $as_Lco_lischka_musiclist_components_LazyLoadScreen$State(obj) {
+  return (($is_Lco_lischka_musiclist_components_LazyLoadScreen$State(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "co.lischka.musiclist.components.LazyLoadScreen$State"))
 }
-function $isArrayOf_Lde_co_lischka_components_LazyLoadScreen$State(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lde_co_lischka_components_LazyLoadScreen$State)))
+function $isArrayOf_Lco_lischka_musiclist_components_LazyLoadScreen$State(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lco_lischka_musiclist_components_LazyLoadScreen$State)))
 }
-function $asArrayOf_Lde_co_lischka_components_LazyLoadScreen$State(obj, depth) {
-  return (($isArrayOf_Lde_co_lischka_components_LazyLoadScreen$State(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lde.co.lischka.components.LazyLoadScreen$State;", depth))
+function $asArrayOf_Lco_lischka_musiclist_components_LazyLoadScreen$State(obj, depth) {
+  return (($isArrayOf_Lco_lischka_musiclist_components_LazyLoadScreen$State(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lco.lischka.musiclist.components.LazyLoadScreen$State;", depth))
 }
-var $d_Lde_co_lischka_components_LazyLoadScreen$State = new $TypeData().initClass({
-  Lde_co_lischka_components_LazyLoadScreen$State: 0
-}, false, "de.co.lischka.components.LazyLoadScreen$State", {
-  Lde_co_lischka_components_LazyLoadScreen$State: 1,
+var $d_Lco_lischka_musiclist_components_LazyLoadScreen$State = new $TypeData().initClass({
+  Lco_lischka_musiclist_components_LazyLoadScreen$State: 0
+}, false, "co.lischka.musiclist.components.LazyLoadScreen$State", {
+  Lco_lischka_musiclist_components_LazyLoadScreen$State: 1,
   O: 1,
   s_Product: 1,
   s_Equals: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lde_co_lischka_components_LazyLoadScreen$State.prototype.$classData = $d_Lde_co_lischka_components_LazyLoadScreen$State;
+$c_Lco_lischka_musiclist_components_LazyLoadScreen$State.prototype.$classData = $d_Lco_lischka_musiclist_components_LazyLoadScreen$State;
 /** @constructor */
-function $c_Lde_co_lischka_components_package$$anonfun$2() {
+function $c_Lco_lischka_musiclist_components_package$$anonfun$2() {
   $c_sr_AbstractFunction1.call(this)
 }
-$c_Lde_co_lischka_components_package$$anonfun$2.prototype = new $h_sr_AbstractFunction1();
-$c_Lde_co_lischka_components_package$$anonfun$2.prototype.constructor = $c_Lde_co_lischka_components_package$$anonfun$2;
+$c_Lco_lischka_musiclist_components_package$$anonfun$2.prototype = new $h_sr_AbstractFunction1();
+$c_Lco_lischka_musiclist_components_package$$anonfun$2.prototype.constructor = $c_Lco_lischka_musiclist_components_package$$anonfun$2;
 /** @constructor */
-function $h_Lde_co_lischka_components_package$$anonfun$2() {
+function $h_Lco_lischka_musiclist_components_package$$anonfun$2() {
   /*<skip>*/
 }
-$h_Lde_co_lischka_components_package$$anonfun$2.prototype = $c_Lde_co_lischka_components_package$$anonfun$2.prototype;
-$c_Lde_co_lischka_components_package$$anonfun$2.prototype.init___ = (function() {
+$h_Lco_lischka_musiclist_components_package$$anonfun$2.prototype = $c_Lco_lischka_musiclist_components_package$$anonfun$2.prototype;
+$c_Lco_lischka_musiclist_components_package$$anonfun$2.prototype.init___ = (function() {
   return this
 });
-$c_Lde_co_lischka_components_package$$anonfun$2.prototype.apply__O__O = (function(v1) {
+$c_Lco_lischka_musiclist_components_package$$anonfun$2.prototype.apply__O__O = (function(v1) {
   return this.apply__Lsri_navigation_NavigationScreenConfigProps__Lsri_navigation_NavigationStackScreenOptions(v1)
 });
-$c_Lde_co_lischka_components_package$$anonfun$2.prototype.apply__Lsri_navigation_NavigationScreenConfigProps__Lsri_navigation_NavigationStackScreenOptions = (function(props) {
+$c_Lco_lischka_musiclist_components_package$$anonfun$2.prototype.apply__Lsri_navigation_NavigationScreenConfigProps__Lsri_navigation_NavigationStackScreenOptions = (function(props) {
   var value = props.navigation.state.params;
   if ((value === (void 0))) {
     var value$2 = (void 0)
@@ -4097,17 +4097,17 @@ $c_Lde_co_lischka_components_package$$anonfun$2.prototype.apply__Lsri_navigation
   fresh$macro$2.title = a;
   return fresh$macro$2
 });
-var $d_Lde_co_lischka_components_package$$anonfun$2 = new $TypeData().initClass({
-  Lde_co_lischka_components_package$$anonfun$2: 0
-}, false, "de.co.lischka.components.package$$anonfun$2", {
-  Lde_co_lischka_components_package$$anonfun$2: 1,
+var $d_Lco_lischka_musiclist_components_package$$anonfun$2 = new $TypeData().initClass({
+  Lco_lischka_musiclist_components_package$$anonfun$2: 0
+}, false, "co.lischka.musiclist.components.package$$anonfun$2", {
+  Lco_lischka_musiclist_components_package$$anonfun$2: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lde_co_lischka_components_package$$anonfun$2.prototype.$classData = $d_Lde_co_lischka_components_package$$anonfun$2;
+$c_Lco_lischka_musiclist_components_package$$anonfun$2.prototype.$classData = $d_Lco_lischka_musiclist_components_package$$anonfun$2;
 /** @constructor */
 function $c_jl_ArithmeticException() {
   $c_jl_RuntimeException.call(this)
@@ -4731,68 +4731,26 @@ var $d_sjsr_UndefinedBehaviorError = new $TypeData().initClass({
 });
 $c_sjsr_UndefinedBehaviorError.prototype.$classData = $d_sjsr_UndefinedBehaviorError;
 /** @constructor */
-function $c_Lde_co_lischka_components_LazyLoadScreen$$anonfun$componentDidMount$1() {
-  $c_sr_AbstractFunction0$mcV$sp.call(this);
-  this.$$outer$3 = null
-}
-$c_Lde_co_lischka_components_LazyLoadScreen$$anonfun$componentDidMount$1.prototype = new $h_sr_AbstractFunction0$mcV$sp();
-$c_Lde_co_lischka_components_LazyLoadScreen$$anonfun$componentDidMount$1.prototype.constructor = $c_Lde_co_lischka_components_LazyLoadScreen$$anonfun$componentDidMount$1;
-/** @constructor */
-function $h_Lde_co_lischka_components_LazyLoadScreen$$anonfun$componentDidMount$1() {
-  /*<skip>*/
-}
-$h_Lde_co_lischka_components_LazyLoadScreen$$anonfun$componentDidMount$1.prototype = $c_Lde_co_lischka_components_LazyLoadScreen$$anonfun$componentDidMount$1.prototype;
-$c_Lde_co_lischka_components_LazyLoadScreen$$anonfun$componentDidMount$1.prototype.apply$mcV$sp__V = (function() {
-  this.$$outer$3.setStateFromState((function(state$2) {
-    $as_Lde_co_lischka_components_LazyLoadScreen$State(state$2);
-    return new $c_Lde_co_lischka_components_LazyLoadScreen$State().init___Z(false)
-  }))
-});
-$c_Lde_co_lischka_components_LazyLoadScreen$$anonfun$componentDidMount$1.prototype.init___Lde_co_lischka_components_LazyLoadScreen = (function($$outer) {
-  if (($$outer === null)) {
-    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
-  } else {
-    this.$$outer$3 = $$outer
-  };
-  return this
-});
-$c_Lde_co_lischka_components_LazyLoadScreen$$anonfun$componentDidMount$1.prototype.apply__O = (function() {
-  this.apply$mcV$sp__V()
-});
-var $d_Lde_co_lischka_components_LazyLoadScreen$$anonfun$componentDidMount$1 = new $TypeData().initClass({
-  Lde_co_lischka_components_LazyLoadScreen$$anonfun$componentDidMount$1: 0
-}, false, "de.co.lischka.components.LazyLoadScreen$$anonfun$componentDidMount$1", {
-  Lde_co_lischka_components_LazyLoadScreen$$anonfun$componentDidMount$1: 1,
-  sr_AbstractFunction0$mcV$sp: 1,
-  sr_AbstractFunction0: 1,
-  O: 1,
-  F0: 1,
-  s_Function0$mcV$sp: 1,
-  s_Serializable: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lde_co_lischka_components_LazyLoadScreen$$anonfun$componentDidMount$1.prototype.$classData = $d_Lde_co_lischka_components_LazyLoadScreen$$anonfun$componentDidMount$1;
-/** @constructor */
-function $c_Lde_co_lischka_components_ScreenWithParams$$anonfun$1() {
+function $c_Lco_lischka_musiclist_components_HomeScreen$$anonfun$render$1() {
   $c_sr_AbstractFunction0$mcZ$sp.call(this);
   this.$$outer$3 = null
 }
-$c_Lde_co_lischka_components_ScreenWithParams$$anonfun$1.prototype = new $h_sr_AbstractFunction0$mcZ$sp();
-$c_Lde_co_lischka_components_ScreenWithParams$$anonfun$1.prototype.constructor = $c_Lde_co_lischka_components_ScreenWithParams$$anonfun$1;
+$c_Lco_lischka_musiclist_components_HomeScreen$$anonfun$render$1.prototype = new $h_sr_AbstractFunction0$mcZ$sp();
+$c_Lco_lischka_musiclist_components_HomeScreen$$anonfun$render$1.prototype.constructor = $c_Lco_lischka_musiclist_components_HomeScreen$$anonfun$render$1;
 /** @constructor */
-function $h_Lde_co_lischka_components_ScreenWithParams$$anonfun$1() {
+function $h_Lco_lischka_musiclist_components_HomeScreen$$anonfun$render$1() {
   /*<skip>*/
 }
-$h_Lde_co_lischka_components_ScreenWithParams$$anonfun$1.prototype = $c_Lde_co_lischka_components_ScreenWithParams$$anonfun$1.prototype;
-$c_Lde_co_lischka_components_ScreenWithParams$$anonfun$1.prototype.apply$mcZ$sp__Z = (function() {
-  var jsx$2 = this.$$outer$3;
+$h_Lco_lischka_musiclist_components_HomeScreen$$anonfun$render$1.prototype = $c_Lco_lischka_musiclist_components_HomeScreen$$anonfun$render$1.prototype;
+$c_Lco_lischka_musiclist_components_HomeScreen$$anonfun$render$1.prototype.apply$mcZ$sp__Z = (function() {
+  $as_Lsri_navigation_NavigationCtrl$(this.$$outer$3.navigation);
   var $this = {};
   $this.title = null;
-  $this.title = "New Title";
-  var jsx$1 = jsx$2.setParams($this);
-  return $uZ(jsx$1)
+  $this.title = "Second title";
+  var navigation = this.$$outer$3.navigationJS;
+  return $uZ(navigation.navigate($d_Lco_lischka_musiclist_components_ScreenWithParams.getClassOf().getName__T(), $this))
 });
-$c_Lde_co_lischka_components_ScreenWithParams$$anonfun$1.prototype.init___Lde_co_lischka_components_ScreenWithParams = (function($$outer) {
+$c_Lco_lischka_musiclist_components_HomeScreen$$anonfun$render$1.prototype.init___Lco_lischka_musiclist_components_HomeScreen = (function($$outer) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
@@ -4800,13 +4758,13 @@ $c_Lde_co_lischka_components_ScreenWithParams$$anonfun$1.prototype.init___Lde_co
   };
   return this
 });
-$c_Lde_co_lischka_components_ScreenWithParams$$anonfun$1.prototype.apply__O = (function() {
+$c_Lco_lischka_musiclist_components_HomeScreen$$anonfun$render$1.prototype.apply__O = (function() {
   return this.apply$mcZ$sp__Z()
 });
-var $d_Lde_co_lischka_components_ScreenWithParams$$anonfun$1 = new $TypeData().initClass({
-  Lde_co_lischka_components_ScreenWithParams$$anonfun$1: 0
-}, false, "de.co.lischka.components.ScreenWithParams$$anonfun$1", {
-  Lde_co_lischka_components_ScreenWithParams$$anonfun$1: 1,
+var $d_Lco_lischka_musiclist_components_HomeScreen$$anonfun$render$1 = new $TypeData().initClass({
+  Lco_lischka_musiclist_components_HomeScreen$$anonfun$render$1: 0
+}, false, "co.lischka.musiclist.components.HomeScreen$$anonfun$render$1", {
+  Lco_lischka_musiclist_components_HomeScreen$$anonfun$render$1: 1,
   sr_AbstractFunction0$mcZ$sp: 1,
   sr_AbstractFunction0: 1,
   O: 1,
@@ -4815,7 +4773,93 @@ var $d_Lde_co_lischka_components_ScreenWithParams$$anonfun$1 = new $TypeData().i
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lde_co_lischka_components_ScreenWithParams$$anonfun$1.prototype.$classData = $d_Lde_co_lischka_components_ScreenWithParams$$anonfun$1;
+$c_Lco_lischka_musiclist_components_HomeScreen$$anonfun$render$1.prototype.$classData = $d_Lco_lischka_musiclist_components_HomeScreen$$anonfun$render$1;
+/** @constructor */
+function $c_Lco_lischka_musiclist_components_LazyLoadScreen$$anonfun$componentDidMount$1() {
+  $c_sr_AbstractFunction0$mcV$sp.call(this);
+  this.$$outer$3 = null
+}
+$c_Lco_lischka_musiclist_components_LazyLoadScreen$$anonfun$componentDidMount$1.prototype = new $h_sr_AbstractFunction0$mcV$sp();
+$c_Lco_lischka_musiclist_components_LazyLoadScreen$$anonfun$componentDidMount$1.prototype.constructor = $c_Lco_lischka_musiclist_components_LazyLoadScreen$$anonfun$componentDidMount$1;
+/** @constructor */
+function $h_Lco_lischka_musiclist_components_LazyLoadScreen$$anonfun$componentDidMount$1() {
+  /*<skip>*/
+}
+$h_Lco_lischka_musiclist_components_LazyLoadScreen$$anonfun$componentDidMount$1.prototype = $c_Lco_lischka_musiclist_components_LazyLoadScreen$$anonfun$componentDidMount$1.prototype;
+$c_Lco_lischka_musiclist_components_LazyLoadScreen$$anonfun$componentDidMount$1.prototype.init___Lco_lischka_musiclist_components_LazyLoadScreen = (function($$outer) {
+  if (($$outer === null)) {
+    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
+  } else {
+    this.$$outer$3 = $$outer
+  };
+  return this
+});
+$c_Lco_lischka_musiclist_components_LazyLoadScreen$$anonfun$componentDidMount$1.prototype.apply$mcV$sp__V = (function() {
+  this.$$outer$3.setStateFromState((function(state$2) {
+    $as_Lco_lischka_musiclist_components_LazyLoadScreen$State(state$2);
+    return new $c_Lco_lischka_musiclist_components_LazyLoadScreen$State().init___Z(false)
+  }))
+});
+$c_Lco_lischka_musiclist_components_LazyLoadScreen$$anonfun$componentDidMount$1.prototype.apply__O = (function() {
+  this.apply$mcV$sp__V()
+});
+var $d_Lco_lischka_musiclist_components_LazyLoadScreen$$anonfun$componentDidMount$1 = new $TypeData().initClass({
+  Lco_lischka_musiclist_components_LazyLoadScreen$$anonfun$componentDidMount$1: 0
+}, false, "co.lischka.musiclist.components.LazyLoadScreen$$anonfun$componentDidMount$1", {
+  Lco_lischka_musiclist_components_LazyLoadScreen$$anonfun$componentDidMount$1: 1,
+  sr_AbstractFunction0$mcV$sp: 1,
+  sr_AbstractFunction0: 1,
+  O: 1,
+  F0: 1,
+  s_Function0$mcV$sp: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lco_lischka_musiclist_components_LazyLoadScreen$$anonfun$componentDidMount$1.prototype.$classData = $d_Lco_lischka_musiclist_components_LazyLoadScreen$$anonfun$componentDidMount$1;
+/** @constructor */
+function $c_Lco_lischka_musiclist_components_ScreenWithParams$$anonfun$1() {
+  $c_sr_AbstractFunction0$mcZ$sp.call(this);
+  this.$$outer$3 = null
+}
+$c_Lco_lischka_musiclist_components_ScreenWithParams$$anonfun$1.prototype = new $h_sr_AbstractFunction0$mcZ$sp();
+$c_Lco_lischka_musiclist_components_ScreenWithParams$$anonfun$1.prototype.constructor = $c_Lco_lischka_musiclist_components_ScreenWithParams$$anonfun$1;
+/** @constructor */
+function $h_Lco_lischka_musiclist_components_ScreenWithParams$$anonfun$1() {
+  /*<skip>*/
+}
+$h_Lco_lischka_musiclist_components_ScreenWithParams$$anonfun$1.prototype = $c_Lco_lischka_musiclist_components_ScreenWithParams$$anonfun$1.prototype;
+$c_Lco_lischka_musiclist_components_ScreenWithParams$$anonfun$1.prototype.apply$mcZ$sp__Z = (function() {
+  var jsx$2 = this.$$outer$3;
+  var $this = {};
+  $this.title = null;
+  $this.title = "New Title";
+  var jsx$1 = jsx$2.setParams($this);
+  return $uZ(jsx$1)
+});
+$c_Lco_lischka_musiclist_components_ScreenWithParams$$anonfun$1.prototype.apply__O = (function() {
+  return this.apply$mcZ$sp__Z()
+});
+$c_Lco_lischka_musiclist_components_ScreenWithParams$$anonfun$1.prototype.init___Lco_lischka_musiclist_components_ScreenWithParams = (function($$outer) {
+  if (($$outer === null)) {
+    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
+  } else {
+    this.$$outer$3 = $$outer
+  };
+  return this
+});
+var $d_Lco_lischka_musiclist_components_ScreenWithParams$$anonfun$1 = new $TypeData().initClass({
+  Lco_lischka_musiclist_components_ScreenWithParams$$anonfun$1: 0
+}, false, "co.lischka.musiclist.components.ScreenWithParams$$anonfun$1", {
+  Lco_lischka_musiclist_components_ScreenWithParams$$anonfun$1: 1,
+  sr_AbstractFunction0$mcZ$sp: 1,
+  sr_AbstractFunction0: 1,
+  O: 1,
+  F0: 1,
+  s_Function0$mcZ$sp: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lco_lischka_musiclist_components_ScreenWithParams$$anonfun$1.prototype.$classData = $d_Lco_lischka_musiclist_components_ScreenWithParams$$anonfun$1;
 /** @constructor */
 function $c_sc_Seq$() {
   $c_scg_SeqFactory.call(this)
@@ -5328,8 +5372,8 @@ function $m_scm_ListBuffer$() {
   };
   return $n_scm_ListBuffer$
 }
-function $s_Lde_co_lischka_components_AboutScreen__render__Lde_co_lischka_components_AboutScreen__Lsri_core_ReactElement($this) {
-  var a = $m_Lde_co_lischka_components_GlobalStyles$().wholeContainer$1;
+function $s_Lco_lischka_musiclist_components_AboutScreen__render__Lco_lischka_musiclist_components_AboutScreen__Lsri_core_ReactElement($this) {
+  var a = $m_Lco_lischka_musiclist_components_GlobalStyles$().wholeContainer$1;
   var x$31 = $i_react$002dnative.Text;
   var x$32 = {};
   var a$1 = $i_react.createElement(x$31, x$32, "This app is built using scala.js and react-native");
@@ -5338,31 +5382,31 @@ function $s_Lde_co_lischka_components_AboutScreen__render__Lde_co_lischka_compon
   var ctor = $i_react$002dnative.View;
   return $i_react.createElement(ctor, fresh$macro$3, a$1)
 }
-var $b_Lde_co_lischka_components_AboutScreen = (void 0);
-function $a_Lde_co_lischka_components_AboutScreen() {
-  if ((!$b_Lde_co_lischka_components_AboutScreen)) {
+var $b_Lco_lischka_musiclist_components_AboutScreen = (void 0);
+function $a_Lco_lischka_musiclist_components_AboutScreen() {
+  if ((!$b_Lco_lischka_musiclist_components_AboutScreen)) {
     /** @constructor */
-    var $c_Lde_co_lischka_components_AboutScreen = (function $c_Lde_co_lischka_components_AboutScreen() {
+    var $c_Lco_lischka_musiclist_components_AboutScreen = (function $c_Lco_lischka_musiclist_components_AboutScreen() {
       $a_Lsri_navigation_NavigationScreenComponentNoPS().call(this)
     });
     /** @constructor */
-    var $h_Lde_co_lischka_components_AboutScreen = (function $h_Lde_co_lischka_components_AboutScreen() {
+    var $h_Lco_lischka_musiclist_components_AboutScreen = (function $h_Lco_lischka_musiclist_components_AboutScreen() {
       /*<skip>*/
     });
-    $h_Lde_co_lischka_components_AboutScreen.prototype = $a_Lsri_navigation_NavigationScreenComponentNoPS().prototype;
-    $c_Lde_co_lischka_components_AboutScreen.prototype = new $h_Lde_co_lischka_components_AboutScreen();
-    $c_Lde_co_lischka_components_AboutScreen.prototype.constructor = $c_Lde_co_lischka_components_AboutScreen;
-    $c_Lde_co_lischka_components_AboutScreen.prototype.render = (function() {
-      return $s_Lde_co_lischka_components_AboutScreen__render__Lde_co_lischka_components_AboutScreen__Lsri_core_ReactElement(this)
+    $h_Lco_lischka_musiclist_components_AboutScreen.prototype = $a_Lsri_navigation_NavigationScreenComponentNoPS().prototype;
+    $c_Lco_lischka_musiclist_components_AboutScreen.prototype = new $h_Lco_lischka_musiclist_components_AboutScreen();
+    $c_Lco_lischka_musiclist_components_AboutScreen.prototype.constructor = $c_Lco_lischka_musiclist_components_AboutScreen;
+    $c_Lco_lischka_musiclist_components_AboutScreen.prototype.render = (function() {
+      return $s_Lco_lischka_musiclist_components_AboutScreen__render__Lco_lischka_musiclist_components_AboutScreen__Lsri_core_ReactElement(this)
     });
-    $b_Lde_co_lischka_components_AboutScreen = $c_Lde_co_lischka_components_AboutScreen
+    $b_Lco_lischka_musiclist_components_AboutScreen = $c_Lco_lischka_musiclist_components_AboutScreen
   };
-  return $b_Lde_co_lischka_components_AboutScreen
+  return $b_Lco_lischka_musiclist_components_AboutScreen
 }
-var $d_Lde_co_lischka_components_AboutScreen = new $TypeData().initClass({
-  Lde_co_lischka_components_AboutScreen: 0
-}, false, "de.co.lischka.components.AboutScreen", {
-  Lde_co_lischka_components_AboutScreen: 1,
+var $d_Lco_lischka_musiclist_components_AboutScreen = new $TypeData().initClass({
+  Lco_lischka_musiclist_components_AboutScreen: 0
+}, false, "co.lischka.musiclist.components.AboutScreen", {
+  Lco_lischka_musiclist_components_AboutScreen: 1,
   Lsri_navigation_NavigationScreenComponentNoPS: 1,
   Lsri_navigation_NavigationScreenComponent: 1,
   Lsri_core_ComponentJS: 1,
@@ -5374,42 +5418,30 @@ var $d_Lde_co_lischka_components_AboutScreen = new $TypeData().initClass({
   Lsri_core_ReactClass: 1,
   Lsri_navigation_ScreenClass: 1
 }, true, (void 0), (function(x) {
-  return (x instanceof $a_Lde_co_lischka_components_AboutScreen())
+  return (x instanceof $a_Lco_lischka_musiclist_components_AboutScreen())
 }));
-function $s_Lde_co_lischka_components_HomeScreen__de$co$lischka$components$HomeScreen$$goToSecondTitle$1__Lde_co_lischka_components_HomeScreen__Z($this) {
-  $as_Lsri_navigation_NavigationCtrl$($this.navigation);
-  var this$2 = {};
-  this$2.title = null;
-  this$2.title = "My cool second title";
-  var navigation = $this.navigationJS;
-  return $uZ(navigation.navigate($d_Lde_co_lischka_components_ScreenWithParams.getClassOf().getName__T(), this$2))
-}
-function $s_Lde_co_lischka_components_HomeScreen__render__Lde_co_lischka_components_HomeScreen__Lsri_core_ReactElement($this) {
-  var a = $m_Lde_co_lischka_components_HomeScreen$styles$().container$1;
-  var a$1 = $this.getBlock(new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(arg$outer) {
+function $s_Lco_lischka_musiclist_components_HomeScreen__render__Lco_lischka_musiclist_components_HomeScreen__Lsri_core_ReactElement($this) {
+  var a = $m_Lco_lischka_musiclist_components_HomeScreen$styles$().container$1;
+  var a$1 = $this.getBlock(new $c_Lco_lischka_musiclist_components_HomeScreen$$anonfun$render$1().init___Lco_lischka_musiclist_components_HomeScreen($this), "Screen With Params");
+  var a$2 = $this.getBlock(new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(arg$outer) {
     return (function() {
-      return $s_Lde_co_lischka_components_HomeScreen__de$co$lischka$components$HomeScreen$$goToSecondTitle$1__Lde_co_lischka_components_HomeScreen__Z(arg$outer)
-    })
-  })($this)), "Screen With Params");
-  var a$2 = $this.getBlock(new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(arg$outer$1) {
-    return (function() {
-      $as_Lsri_navigation_NavigationCtrl$(arg$outer$1.navigation);
-      var navigation = arg$outer$1.navigationJS;
-      return $uZ(navigation.navigate($d_Lde_co_lischka_components_ScreenWithCustomRightButton.getClassOf().getName__T()))
+      $as_Lsri_navigation_NavigationCtrl$(arg$outer.navigation);
+      var navigation = arg$outer.navigationJS;
+      return $uZ(navigation.navigate($d_Lco_lischka_musiclist_components_ScreenWithCustomRightButton.getClassOf().getName__T()))
     })
   })($this)), "Screen With Right Button");
-  var a$3 = $this.getBlock(new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(arg$outer$2) {
+  var a$3 = $this.getBlock(new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(arg$outer$1) {
     return (function() {
-      $as_Lsri_navigation_NavigationCtrl$(arg$outer$2.navigation);
-      var navigation$1 = arg$outer$2.navigationJS;
-      return $uZ(navigation$1.navigate($d_Lde_co_lischka_components_LazyLoadScreen.getClassOf().getName__T()))
+      $as_Lsri_navigation_NavigationCtrl$(arg$outer$1.navigation);
+      var navigation$1 = arg$outer$1.navigationJS;
+      return $uZ(navigation$1.navigate($d_Lco_lischka_musiclist_components_LazyLoadScreen.getClassOf().getName__T()))
     })
   })($this)), "LazyLoad Screen");
-  var a$4 = $this.getBlock(new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(arg$outer$3) {
+  var a$4 = $this.getBlock(new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(arg$outer$2) {
     return (function() {
-      $as_Lsri_navigation_NavigationCtrl$(arg$outer$3.navigation);
-      var navigation$2 = arg$outer$3.navigationJS;
-      return $uZ(navigation$2.navigate($d_Lde_co_lischka_components_AboutScreen.getClassOf().getName__T()))
+      $as_Lsri_navigation_NavigationCtrl$(arg$outer$2.navigation);
+      var navigation$2 = arg$outer$2.navigationJS;
+      return $uZ(navigation$2.navigate($d_Lco_lischka_musiclist_components_AboutScreen.getClassOf().getName__T()))
     })
   })($this)), "About Screen");
   var fresh$macro$3 = {};
@@ -5417,10 +5449,10 @@ function $s_Lde_co_lischka_components_HomeScreen__render__Lde_co_lischka_compone
   var ctor = $i_react$002dnative.View;
   return $i_react.createElement(ctor, fresh$macro$3, a$1, a$2, a$3, a$4)
 }
-function $s_Lde_co_lischka_components_HomeScreen__getBlock__Lde_co_lischka_components_HomeScreen__F0__T__Lsri_core_ReactElement($this, onPress, title) {
-  var a = $m_Lde_co_lischka_components_HomeScreen$styles$().block$1;
+function $s_Lco_lischka_musiclist_components_HomeScreen__getBlock__Lco_lischka_musiclist_components_HomeScreen__F0__T__Lsri_core_ReactElement($this, onPress, title) {
+  var a = $m_Lco_lischka_musiclist_components_HomeScreen$styles$().block$1;
   var jsx$1 = $m_sc_Seq$();
-  var a$1 = $m_Lde_co_lischka_components_HomeScreen$styles$().blockText$1;
+  var a$1 = $m_Lco_lischka_musiclist_components_HomeScreen$styles$().blockText$1;
   var fresh$macro$19 = {};
   fresh$macro$19.style = a$1;
   var ctor = $i_react$002dnative.Text;
@@ -5454,36 +5486,36 @@ function $s_Lde_co_lischka_components_HomeScreen__getBlock__Lde_co_lischka_compo
   var jsx$2 = $i_react;
   return jsx$2.createElement.apply(jsx$2, [ctor$1, fresh$macro$25].concat(children))
 }
-var $b_Lde_co_lischka_components_HomeScreen = (void 0);
-function $a_Lde_co_lischka_components_HomeScreen() {
-  if ((!$b_Lde_co_lischka_components_HomeScreen)) {
+var $b_Lco_lischka_musiclist_components_HomeScreen = (void 0);
+function $a_Lco_lischka_musiclist_components_HomeScreen() {
+  if ((!$b_Lco_lischka_musiclist_components_HomeScreen)) {
     /** @constructor */
-    var $c_Lde_co_lischka_components_HomeScreen = (function $c_Lde_co_lischka_components_HomeScreen() {
+    var $c_Lco_lischka_musiclist_components_HomeScreen = (function $c_Lco_lischka_musiclist_components_HomeScreen() {
       $a_Lsri_navigation_NavigationScreenComponentNoPS().call(this)
     });
     /** @constructor */
-    var $h_Lde_co_lischka_components_HomeScreen = (function $h_Lde_co_lischka_components_HomeScreen() {
+    var $h_Lco_lischka_musiclist_components_HomeScreen = (function $h_Lco_lischka_musiclist_components_HomeScreen() {
       /*<skip>*/
     });
-    $h_Lde_co_lischka_components_HomeScreen.prototype = $a_Lsri_navigation_NavigationScreenComponentNoPS().prototype;
-    $c_Lde_co_lischka_components_HomeScreen.prototype = new $h_Lde_co_lischka_components_HomeScreen();
-    $c_Lde_co_lischka_components_HomeScreen.prototype.constructor = $c_Lde_co_lischka_components_HomeScreen;
-    $c_Lde_co_lischka_components_HomeScreen.prototype.render = (function() {
-      return $s_Lde_co_lischka_components_HomeScreen__render__Lde_co_lischka_components_HomeScreen__Lsri_core_ReactElement(this)
+    $h_Lco_lischka_musiclist_components_HomeScreen.prototype = $a_Lsri_navigation_NavigationScreenComponentNoPS().prototype;
+    $c_Lco_lischka_musiclist_components_HomeScreen.prototype = new $h_Lco_lischka_musiclist_components_HomeScreen();
+    $c_Lco_lischka_musiclist_components_HomeScreen.prototype.constructor = $c_Lco_lischka_musiclist_components_HomeScreen;
+    $c_Lco_lischka_musiclist_components_HomeScreen.prototype.render = (function() {
+      return $s_Lco_lischka_musiclist_components_HomeScreen__render__Lco_lischka_musiclist_components_HomeScreen__Lsri_core_ReactElement(this)
     });
-    $c_Lde_co_lischka_components_HomeScreen.prototype.getBlock = (function(arg$1, arg$2) {
+    $c_Lco_lischka_musiclist_components_HomeScreen.prototype.getBlock = (function(arg$1, arg$2) {
       var prep0 = $as_F0(arg$1);
       var prep1 = $as_T(arg$2);
-      return $s_Lde_co_lischka_components_HomeScreen__getBlock__Lde_co_lischka_components_HomeScreen__F0__T__Lsri_core_ReactElement(this, prep0, prep1)
+      return $s_Lco_lischka_musiclist_components_HomeScreen__getBlock__Lco_lischka_musiclist_components_HomeScreen__F0__T__Lsri_core_ReactElement(this, prep0, prep1)
     });
-    $b_Lde_co_lischka_components_HomeScreen = $c_Lde_co_lischka_components_HomeScreen
+    $b_Lco_lischka_musiclist_components_HomeScreen = $c_Lco_lischka_musiclist_components_HomeScreen
   };
-  return $b_Lde_co_lischka_components_HomeScreen
+  return $b_Lco_lischka_musiclist_components_HomeScreen
 }
-var $d_Lde_co_lischka_components_HomeScreen = new $TypeData().initClass({
-  Lde_co_lischka_components_HomeScreen: 0
-}, false, "de.co.lischka.components.HomeScreen", {
-  Lde_co_lischka_components_HomeScreen: 1,
+var $d_Lco_lischka_musiclist_components_HomeScreen = new $TypeData().initClass({
+  Lco_lischka_musiclist_components_HomeScreen: 0
+}, false, "co.lischka.musiclist.components.HomeScreen", {
+  Lco_lischka_musiclist_components_HomeScreen: 1,
   Lsri_navigation_NavigationScreenComponentNoPS: 1,
   Lsri_navigation_NavigationScreenComponent: 1,
   Lsri_core_ComponentJS: 1,
@@ -5495,18 +5527,18 @@ var $d_Lde_co_lischka_components_HomeScreen = new $TypeData().initClass({
   Lsri_core_ReactClass: 1,
   Lsri_navigation_ScreenClass: 1
 }, true, (void 0), (function(x) {
-  return (x instanceof $a_Lde_co_lischka_components_HomeScreen())
+  return (x instanceof $a_Lco_lischka_musiclist_components_HomeScreen())
 }));
-function $s_Lde_co_lischka_components_LazyLoadScreen__componentDidMount__Lde_co_lischka_components_LazyLoadScreen__V($this) {
+function $s_Lco_lischka_musiclist_components_LazyLoadScreen__componentDidMount__Lco_lischka_musiclist_components_LazyLoadScreen__V($this) {
   $i_react$002dnative.InteractionManager.runAfterInteractions((function(f) {
     return (function() {
       return f.apply__O()
     })
-  })(new $c_Lde_co_lischka_components_LazyLoadScreen$$anonfun$componentDidMount$1().init___Lde_co_lischka_components_LazyLoadScreen($this)))
+  })(new $c_Lco_lischka_musiclist_components_LazyLoadScreen$$anonfun$componentDidMount$1().init___Lco_lischka_musiclist_components_LazyLoadScreen($this)))
 }
-function $s_Lde_co_lischka_components_LazyLoadScreen__render__Lde_co_lischka_components_LazyLoadScreen__Lsri_core_ReactElement($this) {
-  var a = $m_Lde_co_lischka_components_GlobalStyles$().wholeContainer$1;
-  if ($as_Lde_co_lischka_components_LazyLoadScreen$State($this.scalaState).loading$1) {
+function $s_Lco_lischka_musiclist_components_LazyLoadScreen__render__Lco_lischka_musiclist_components_LazyLoadScreen__Lsri_core_ReactElement($this) {
+  var a = $m_Lco_lischka_musiclist_components_GlobalStyles$().wholeContainer$1;
+  if ($as_Lco_lischka_musiclist_components_LazyLoadScreen$State($this.scalaState).loading$1) {
     var fresh$macro$5 = {};
     fresh$macro$5.size = "large";
     fresh$macro$5.color = "red";
@@ -5524,35 +5556,35 @@ function $s_Lde_co_lischka_components_LazyLoadScreen__render__Lde_co_lischka_com
   var ctor$1 = $i_react$002dnative.View;
   return $i_react.createElement(ctor$1, fresh$macro$3, x0)
 }
-var $b_Lde_co_lischka_components_LazyLoadScreen = (void 0);
-function $a_Lde_co_lischka_components_LazyLoadScreen() {
-  if ((!$b_Lde_co_lischka_components_LazyLoadScreen)) {
+var $b_Lco_lischka_musiclist_components_LazyLoadScreen = (void 0);
+function $a_Lco_lischka_musiclist_components_LazyLoadScreen() {
+  if ((!$b_Lco_lischka_musiclist_components_LazyLoadScreen)) {
     /** @constructor */
-    var $c_Lde_co_lischka_components_LazyLoadScreen = (function $c_Lde_co_lischka_components_LazyLoadScreen() {
+    var $c_Lco_lischka_musiclist_components_LazyLoadScreen = (function $c_Lco_lischka_musiclist_components_LazyLoadScreen() {
       $a_Lsri_navigation_NavigationScreenComponentS().call(this, $m_Lsri_core_package$().neq__Lsri_core_package$$eq$colon$bang$eq());
-      this.initialState(new $c_Lde_co_lischka_components_LazyLoadScreen$State().init___Z(true))
+      this.initialState(new $c_Lco_lischka_musiclist_components_LazyLoadScreen$State().init___Z(true))
     });
     /** @constructor */
-    var $h_Lde_co_lischka_components_LazyLoadScreen = (function $h_Lde_co_lischka_components_LazyLoadScreen() {
+    var $h_Lco_lischka_musiclist_components_LazyLoadScreen = (function $h_Lco_lischka_musiclist_components_LazyLoadScreen() {
       /*<skip>*/
     });
-    $h_Lde_co_lischka_components_LazyLoadScreen.prototype = $a_Lsri_navigation_NavigationScreenComponentS().prototype;
-    $c_Lde_co_lischka_components_LazyLoadScreen.prototype = new $h_Lde_co_lischka_components_LazyLoadScreen();
-    $c_Lde_co_lischka_components_LazyLoadScreen.prototype.constructor = $c_Lde_co_lischka_components_LazyLoadScreen;
-    $c_Lde_co_lischka_components_LazyLoadScreen.prototype.render = (function() {
-      return $s_Lde_co_lischka_components_LazyLoadScreen__render__Lde_co_lischka_components_LazyLoadScreen__Lsri_core_ReactElement(this)
+    $h_Lco_lischka_musiclist_components_LazyLoadScreen.prototype = $a_Lsri_navigation_NavigationScreenComponentS().prototype;
+    $c_Lco_lischka_musiclist_components_LazyLoadScreen.prototype = new $h_Lco_lischka_musiclist_components_LazyLoadScreen();
+    $c_Lco_lischka_musiclist_components_LazyLoadScreen.prototype.constructor = $c_Lco_lischka_musiclist_components_LazyLoadScreen;
+    $c_Lco_lischka_musiclist_components_LazyLoadScreen.prototype.render = (function() {
+      return $s_Lco_lischka_musiclist_components_LazyLoadScreen__render__Lco_lischka_musiclist_components_LazyLoadScreen__Lsri_core_ReactElement(this)
     });
-    $c_Lde_co_lischka_components_LazyLoadScreen.prototype.componentDidMount = (function() {
-      $s_Lde_co_lischka_components_LazyLoadScreen__componentDidMount__Lde_co_lischka_components_LazyLoadScreen__V(this)
+    $c_Lco_lischka_musiclist_components_LazyLoadScreen.prototype.componentDidMount = (function() {
+      $s_Lco_lischka_musiclist_components_LazyLoadScreen__componentDidMount__Lco_lischka_musiclist_components_LazyLoadScreen__V(this)
     });
-    $b_Lde_co_lischka_components_LazyLoadScreen = $c_Lde_co_lischka_components_LazyLoadScreen
+    $b_Lco_lischka_musiclist_components_LazyLoadScreen = $c_Lco_lischka_musiclist_components_LazyLoadScreen
   };
-  return $b_Lde_co_lischka_components_LazyLoadScreen
+  return $b_Lco_lischka_musiclist_components_LazyLoadScreen
 }
-var $d_Lde_co_lischka_components_LazyLoadScreen = new $TypeData().initClass({
-  Lde_co_lischka_components_LazyLoadScreen: 0
-}, false, "de.co.lischka.components.LazyLoadScreen", {
-  Lde_co_lischka_components_LazyLoadScreen: 1,
+var $d_Lco_lischka_musiclist_components_LazyLoadScreen = new $TypeData().initClass({
+  Lco_lischka_musiclist_components_LazyLoadScreen: 0
+}, false, "co.lischka.musiclist.components.LazyLoadScreen", {
+  Lco_lischka_musiclist_components_LazyLoadScreen: 1,
   Lsri_navigation_NavigationScreenComponentS: 1,
   Lsri_navigation_NavigationScreenComponent: 1,
   Lsri_core_ComponentJS: 1,
@@ -5564,10 +5596,10 @@ var $d_Lde_co_lischka_components_LazyLoadScreen = new $TypeData().initClass({
   Lsri_core_ReactClass: 1,
   Lsri_navigation_ScreenClass: 1
 }, true, (void 0), (function(x) {
-  return (x instanceof $a_Lde_co_lischka_components_LazyLoadScreen())
+  return (x instanceof $a_Lco_lischka_musiclist_components_LazyLoadScreen())
 }));
-function $s_Lde_co_lischka_components_ScreenWithCustomRightButton__render__Lde_co_lischka_components_ScreenWithCustomRightButton__Lsri_core_ReactElement($this) {
-  var a = $m_Lde_co_lischka_components_GlobalStyles$().wholeContainer$1;
+function $s_Lco_lischka_musiclist_components_ScreenWithCustomRightButton__render__Lco_lischka_musiclist_components_ScreenWithCustomRightButton__Lsri_core_ReactElement($this) {
+  var a = $m_Lco_lischka_musiclist_components_GlobalStyles$().wholeContainer$1;
   var x$31 = $i_react$002dnative.Text;
   var x$32 = {};
   var a$1 = $i_react.createElement(x$31, x$32, "Header Right element example");
@@ -5576,31 +5608,31 @@ function $s_Lde_co_lischka_components_ScreenWithCustomRightButton__render__Lde_c
   var ctor = $i_react$002dnative.View;
   return $i_react.createElement(ctor, fresh$macro$3, a$1)
 }
-var $b_Lde_co_lischka_components_ScreenWithCustomRightButton = (void 0);
-function $a_Lde_co_lischka_components_ScreenWithCustomRightButton() {
-  if ((!$b_Lde_co_lischka_components_ScreenWithCustomRightButton)) {
+var $b_Lco_lischka_musiclist_components_ScreenWithCustomRightButton = (void 0);
+function $a_Lco_lischka_musiclist_components_ScreenWithCustomRightButton() {
+  if ((!$b_Lco_lischka_musiclist_components_ScreenWithCustomRightButton)) {
     /** @constructor */
-    var $c_Lde_co_lischka_components_ScreenWithCustomRightButton = (function $c_Lde_co_lischka_components_ScreenWithCustomRightButton() {
+    var $c_Lco_lischka_musiclist_components_ScreenWithCustomRightButton = (function $c_Lco_lischka_musiclist_components_ScreenWithCustomRightButton() {
       $a_Lsri_navigation_NavigationScreenComponentNoPS().call(this)
     });
     /** @constructor */
-    var $h_Lde_co_lischka_components_ScreenWithCustomRightButton = (function $h_Lde_co_lischka_components_ScreenWithCustomRightButton() {
+    var $h_Lco_lischka_musiclist_components_ScreenWithCustomRightButton = (function $h_Lco_lischka_musiclist_components_ScreenWithCustomRightButton() {
       /*<skip>*/
     });
-    $h_Lde_co_lischka_components_ScreenWithCustomRightButton.prototype = $a_Lsri_navigation_NavigationScreenComponentNoPS().prototype;
-    $c_Lde_co_lischka_components_ScreenWithCustomRightButton.prototype = new $h_Lde_co_lischka_components_ScreenWithCustomRightButton();
-    $c_Lde_co_lischka_components_ScreenWithCustomRightButton.prototype.constructor = $c_Lde_co_lischka_components_ScreenWithCustomRightButton;
-    $c_Lde_co_lischka_components_ScreenWithCustomRightButton.prototype.render = (function() {
-      return $s_Lde_co_lischka_components_ScreenWithCustomRightButton__render__Lde_co_lischka_components_ScreenWithCustomRightButton__Lsri_core_ReactElement(this)
+    $h_Lco_lischka_musiclist_components_ScreenWithCustomRightButton.prototype = $a_Lsri_navigation_NavigationScreenComponentNoPS().prototype;
+    $c_Lco_lischka_musiclist_components_ScreenWithCustomRightButton.prototype = new $h_Lco_lischka_musiclist_components_ScreenWithCustomRightButton();
+    $c_Lco_lischka_musiclist_components_ScreenWithCustomRightButton.prototype.constructor = $c_Lco_lischka_musiclist_components_ScreenWithCustomRightButton;
+    $c_Lco_lischka_musiclist_components_ScreenWithCustomRightButton.prototype.render = (function() {
+      return $s_Lco_lischka_musiclist_components_ScreenWithCustomRightButton__render__Lco_lischka_musiclist_components_ScreenWithCustomRightButton__Lsri_core_ReactElement(this)
     });
-    $b_Lde_co_lischka_components_ScreenWithCustomRightButton = $c_Lde_co_lischka_components_ScreenWithCustomRightButton
+    $b_Lco_lischka_musiclist_components_ScreenWithCustomRightButton = $c_Lco_lischka_musiclist_components_ScreenWithCustomRightButton
   };
-  return $b_Lde_co_lischka_components_ScreenWithCustomRightButton
+  return $b_Lco_lischka_musiclist_components_ScreenWithCustomRightButton
 }
-var $d_Lde_co_lischka_components_ScreenWithCustomRightButton = new $TypeData().initClass({
-  Lde_co_lischka_components_ScreenWithCustomRightButton: 0
-}, false, "de.co.lischka.components.ScreenWithCustomRightButton", {
-  Lde_co_lischka_components_ScreenWithCustomRightButton: 1,
+var $d_Lco_lischka_musiclist_components_ScreenWithCustomRightButton = new $TypeData().initClass({
+  Lco_lischka_musiclist_components_ScreenWithCustomRightButton: 0
+}, false, "co.lischka.musiclist.components.ScreenWithCustomRightButton", {
+  Lco_lischka_musiclist_components_ScreenWithCustomRightButton: 1,
   Lsri_navigation_NavigationScreenComponentNoPS: 1,
   Lsri_navigation_NavigationScreenComponent: 1,
   Lsri_core_ComponentJS: 1,
@@ -5612,13 +5644,13 @@ var $d_Lde_co_lischka_components_ScreenWithCustomRightButton = new $TypeData().i
   Lsri_core_ReactClass: 1,
   Lsri_navigation_ScreenClass: 1
 }, true, (void 0), (function(x) {
-  return (x instanceof $a_Lde_co_lischka_components_ScreenWithCustomRightButton())
+  return (x instanceof $a_Lco_lischka_musiclist_components_ScreenWithCustomRightButton())
 }));
-function $s_Lde_co_lischka_components_ScreenWithParams__render__Lde_co_lischka_components_ScreenWithParams__Lsri_core_ReactElement($this) {
-  var a = $m_Lde_co_lischka_components_GlobalStyles$().wholeContainer$1;
-  var x$2 = new $c_Lde_co_lischka_components_ScreenWithParams$$anonfun$1().init___Lde_co_lischka_components_ScreenWithParams($this);
+function $s_Lco_lischka_musiclist_components_ScreenWithParams__render__Lco_lischka_musiclist_components_ScreenWithParams__Lsri_core_ReactElement($this) {
+  var a = $m_Lco_lischka_musiclist_components_GlobalStyles$().wholeContainer$1;
+  var x$2 = new $c_Lco_lischka_musiclist_components_ScreenWithParams$$anonfun$1().init___Lco_lischka_musiclist_components_ScreenWithParams($this);
   var fresh$macro$6 = {
-    "title": "My cool button",
+    "title": "Set New Params",
     "onPress": (function(f) {
       return (function() {
         return f.apply__O()
@@ -5632,31 +5664,31 @@ function $s_Lde_co_lischka_components_ScreenWithParams__render__Lde_co_lischka_c
   var ctor$1 = $i_react$002dnative.View;
   return $i_react.createElement(ctor$1, fresh$macro$3, a$1)
 }
-var $b_Lde_co_lischka_components_ScreenWithParams = (void 0);
-function $a_Lde_co_lischka_components_ScreenWithParams() {
-  if ((!$b_Lde_co_lischka_components_ScreenWithParams)) {
+var $b_Lco_lischka_musiclist_components_ScreenWithParams = (void 0);
+function $a_Lco_lischka_musiclist_components_ScreenWithParams() {
+  if ((!$b_Lco_lischka_musiclist_components_ScreenWithParams)) {
     /** @constructor */
-    var $c_Lde_co_lischka_components_ScreenWithParams = (function $c_Lde_co_lischka_components_ScreenWithParams() {
+    var $c_Lco_lischka_musiclist_components_ScreenWithParams = (function $c_Lco_lischka_musiclist_components_ScreenWithParams() {
       $a_Lsri_navigation_NavigationScreenComponentP().call(this, $m_Lsri_core_package$().neq__Lsri_core_package$$eq$colon$bang$eq())
     });
     /** @constructor */
-    var $h_Lde_co_lischka_components_ScreenWithParams = (function $h_Lde_co_lischka_components_ScreenWithParams() {
+    var $h_Lco_lischka_musiclist_components_ScreenWithParams = (function $h_Lco_lischka_musiclist_components_ScreenWithParams() {
       /*<skip>*/
     });
-    $h_Lde_co_lischka_components_ScreenWithParams.prototype = $a_Lsri_navigation_NavigationScreenComponentP().prototype;
-    $c_Lde_co_lischka_components_ScreenWithParams.prototype = new $h_Lde_co_lischka_components_ScreenWithParams();
-    $c_Lde_co_lischka_components_ScreenWithParams.prototype.constructor = $c_Lde_co_lischka_components_ScreenWithParams;
-    $c_Lde_co_lischka_components_ScreenWithParams.prototype.render = (function() {
-      return $s_Lde_co_lischka_components_ScreenWithParams__render__Lde_co_lischka_components_ScreenWithParams__Lsri_core_ReactElement(this)
+    $h_Lco_lischka_musiclist_components_ScreenWithParams.prototype = $a_Lsri_navigation_NavigationScreenComponentP().prototype;
+    $c_Lco_lischka_musiclist_components_ScreenWithParams.prototype = new $h_Lco_lischka_musiclist_components_ScreenWithParams();
+    $c_Lco_lischka_musiclist_components_ScreenWithParams.prototype.constructor = $c_Lco_lischka_musiclist_components_ScreenWithParams;
+    $c_Lco_lischka_musiclist_components_ScreenWithParams.prototype.render = (function() {
+      return $s_Lco_lischka_musiclist_components_ScreenWithParams__render__Lco_lischka_musiclist_components_ScreenWithParams__Lsri_core_ReactElement(this)
     });
-    $b_Lde_co_lischka_components_ScreenWithParams = $c_Lde_co_lischka_components_ScreenWithParams
+    $b_Lco_lischka_musiclist_components_ScreenWithParams = $c_Lco_lischka_musiclist_components_ScreenWithParams
   };
-  return $b_Lde_co_lischka_components_ScreenWithParams
+  return $b_Lco_lischka_musiclist_components_ScreenWithParams
 }
-var $d_Lde_co_lischka_components_ScreenWithParams = new $TypeData().initClass({
-  Lde_co_lischka_components_ScreenWithParams: 0
-}, false, "de.co.lischka.components.ScreenWithParams", {
-  Lde_co_lischka_components_ScreenWithParams: 1,
+var $d_Lco_lischka_musiclist_components_ScreenWithParams = new $TypeData().initClass({
+  Lco_lischka_musiclist_components_ScreenWithParams: 0
+}, false, "co.lischka.musiclist.components.ScreenWithParams", {
+  Lco_lischka_musiclist_components_ScreenWithParams: 1,
   Lsri_navigation_NavigationScreenComponentP: 1,
   Lsri_navigation_NavigationScreenComponent: 1,
   Lsri_core_ComponentJS: 1,
@@ -5668,7 +5700,7 @@ var $d_Lde_co_lischka_components_ScreenWithParams = new $TypeData().initClass({
   Lsri_core_ReactClass: 1,
   Lsri_navigation_ScreenClass: 1
 }, true, (void 0), (function(x) {
-  return (x instanceof $a_Lde_co_lischka_components_ScreenWithParams())
+  return (x instanceof $a_Lco_lischka_musiclist_components_ScreenWithParams())
 }));
 /** @constructor */
 function $c_sc_AbstractTraversable() {
@@ -6758,9 +6790,9 @@ var $d_scm_ArrayBuffer = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_scm_ArrayBuffer.prototype.$classData = $d_scm_ArrayBuffer;
-$e.de = ($e.de || {});
-$e.de.co = ($e.de.co || {});
-$e.de.co.lischka = ($e.de.co.lischka || {});
-$e.de.co.lischka.MobileApp = $m_Lde_co_lischka_MobileApp$;
-$m_Lde_co_lischka_MobileApp$().main__V();
+$e.co = ($e.co || {});
+$e.co.lischka = ($e.co.lischka || {});
+$e.co.lischka.musiclist = ($e.co.lischka.musiclist || {});
+$e.co.lischka.musiclist.MobileApp = $m_Lco_lischka_musiclist_MobileApp$;
+$m_Lco_lischka_musiclist_MobileApp$().main__V();
 //# sourceMappingURL=scalajs-output-ios.js.map
