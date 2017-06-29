@@ -12,7 +12,8 @@ the hassle of convincing them of any other platform than MusicList (permalink is
     sbt "project musicListJS" ~ios:dev
 
 
-## Three seperate bashes
+## Run node dev server and iPhone simulator
+(Open in three different terminals)
     cd js
     npm start
     sbt "project musicListJS" ~ios:dev
