@@ -19,9 +19,12 @@ class HomeScreen extends NavigationScreenComponentNoPS {
                    override val title: String = "Parse some tracks"
                  }),
                "Get it on"),
+
       getBlock(() => navigation.navigate[ScreenWithCustomRightButton],
                "Screen With Right Button"),
-      getBlock(() => navigation.navigate[LazyLoadScreen], "LazyLoad Screen"),
+
+      getBlock(() => navigation.navigate[StreamingPlayer] _, "Player"),
+
       getBlock(() => navigation.navigate[AboutScreen], "About Screen")
     )
   }

@@ -28,7 +28,5 @@ class LazyLoadScreen extends NavigationScreenComponentS[LazyLoadScreen.State] {
 }
 
 object LazyLoadScreen {
-
   case class State(loading: Boolean)
-
 }

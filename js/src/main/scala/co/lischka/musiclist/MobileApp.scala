@@ -10,5 +10,6 @@ object MobileApp extends JSApp {
   def main() = {
     core.setReactElementType
     AppRegistry.registerComponent("musiclist", () => components.root)
+
   }
 }

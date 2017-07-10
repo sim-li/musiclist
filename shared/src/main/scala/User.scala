@@ -1,0 +1,1 @@
+case class User(coolName: String)

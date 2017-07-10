@@ -8,7 +8,6 @@ import co.lischka.musiclist.restapi.models.UserEntity
 import co.lischka.musiclist.restapi.services.AuthService
 import io.circe.generic.auto._
 import io.circe.syntax._
-
 import scala.concurrent.ExecutionContext
 
 class AuthServiceRoute(val authService: AuthService)(implicit executionContext: ExecutionContext) extends CirceSupport with SecurityDirectives {

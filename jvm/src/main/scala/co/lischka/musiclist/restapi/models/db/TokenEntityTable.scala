@@ -13,7 +13,11 @@ trait TokenEntityTable extends UserEntityTable {
     def userId = column[Option[Long]]("user_id")
     def token = column[String]("token")
 
-    def userFk = foreignKey("USER_FK", userId, users)(_.id, onUpdate = ForeignKeyAction.Restrict, onDelete = ForeignKeyAction.Cascade)
+    def userFk = foreignKey("USER_FK", userId, users)(
+      _.id,
+      onUpdate = ForeignKeyAction.Restrict,
+      onDelete = ForeignKeyAction.Cascade
+    )
 
     def * = (id, userId, token) <> ((TokenEntity.apply _).tupled, TokenEntity.unapply)
   }
