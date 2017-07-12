@@ -18,12 +18,13 @@ case class SearchResult(result: String)
 
 class SearchServiceRoute()(implicit executionContext: ExecutionContext) extends CirceSupport {
 
-  val route = path("search"){
+  val route = path("results"){
     pathEndOrSingleSlash {
-      post {
-        complete(SearchResult("Test").asJson)
+      get {
+        parameters("search_query") { (searchQuery) =>
+          complete(SearchResult(s"Got ${searchQuery}").asJson)
+        }
       }
     }
   }
 }
-

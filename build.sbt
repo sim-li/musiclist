@@ -39,7 +39,10 @@ lazy val musicList = crossProject.in(file(".")).
 
         "org.scalatest" %% "scalatest" % scalaTestV % "test",
         "com.typesafe.akka" %% "akka-http-testkit" % akkaV % "test",
-        "ru.yandex.qatools.embed" % "postgresql-embedded" % "1.15" % "test"
+        "ru.yandex.qatools.embed" % "postgresql-embedded" % "1.15" % "test",
+
+        "com.google.api.client" % "google-api-client" % "1.22.0"
+
       )
     })
 
