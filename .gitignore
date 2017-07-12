@@ -1,6 +1,7 @@
 ################
 ##
 ################
+js/package-lock.json
 js/android/
 js/ios/
 js/assets/
