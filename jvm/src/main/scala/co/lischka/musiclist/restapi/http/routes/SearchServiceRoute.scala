@@ -20,7 +20,7 @@ class SearchServiceRoute()(implicit executionContext: ExecutionContext) extends 
 
   val route = path("search"){
     pathEndOrSingleSlash {
-      post {
+      get {
         complete(SearchResult("Test").asJson)
       }
     }
