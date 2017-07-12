@@ -7,10 +7,15 @@ import scala.scalajs.js.annotation.ScalaJSDefined
 import sri.universal.components._
 import scala.scalajs.js.Object
 
+
 @ScalaJSDefined
 class StreamingPlayer extends NavigationScreenComponent[StreamingPlayer.Params, StreamingPlayer.State] {
   import StreamingPlayer._
   initialState(State(currentTime=0))
+
+  def onPlay(): Unit = {
+    Player
+  }
 
   override def render() = {
     View(style = GlobalStyles.wholeContainer)(
