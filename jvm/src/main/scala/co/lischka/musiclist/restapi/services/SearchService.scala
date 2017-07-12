@@ -4,6 +4,4 @@ class SearchService(){
 
   def getTitle(title: String) = ???
 
-  def test()
-
 }
