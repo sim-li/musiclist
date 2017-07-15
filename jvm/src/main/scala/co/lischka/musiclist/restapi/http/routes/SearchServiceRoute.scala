@@ -9,19 +9,17 @@ import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.server.PathMatchers.IntNumber
 
 import co.lischka.musiclist.restapi.http.SecurityDirectives
-import co.lischka.musiclist.restapi.models.UserEntityUpdate
+import co.lischka.musiclist.restapi.models.{Track, UserEntityUpdate}
 import co.lischka.musiclist.restapi.services.{SearchService, AuthService, UsersService}
 import io.circe.generic.auto._
 import io.circe.syntax._
-
-case class SearchResult(result: String)
 
 class SearchServiceRoute(val searchService: SearchService)(implicit executionContext: ExecutionContext) extends CirceSupport {
   val route = pathPrefix("results"){
     pathEndOrSingleSlash {
       get {
         parameters("search_query") { (searchQuery) =>
-          val answer: Future[String] = searchService.search(searchQuery)
+          val answer: Future[List[Track]] = searchService.search(searchQuery)
           complete(answer.map(_.asJson))
         }
       }

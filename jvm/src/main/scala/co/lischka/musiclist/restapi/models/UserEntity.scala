@@ -10,3 +10,4 @@ case class UserEntityUpdate(username: Option[String] = None, password: Option[St
     UserEntity(user.id, username.getOrElse(user.username), password.getOrElse(user.password))
   }
 }
+

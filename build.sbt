@@ -36,6 +36,7 @@ lazy val musicList = crossProject.in(file(".")).
         "io.circe" %% "circe-core" % circeV,
         "io.circe" %% "circe-generic" % circeV,
         "io.circe" %% "circe-parser" % circeV,
+        "io.circe" %% "circe-optics" % circeV,
 
         "org.scalatest" %% "scalatest" % scalaTestV % "test",
         "com.typesafe.akka" %% "akka-http-testkit" % akkaV % "test",
