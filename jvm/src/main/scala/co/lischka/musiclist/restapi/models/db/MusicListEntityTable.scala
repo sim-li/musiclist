@@ -10,7 +10,7 @@ trait MusicListEntityTable {
 
   class MusicList(tag: Tag) extends Table[MusicListEntity](tag, "list"){
     def id = column[Option[Long]]("id", O.PrimaryKey, O.AutoInc)
-    def permakink = column[String]("permalink")
+    def permalink = column[String]("permalink")
 
     def * = (id, permalink) <> ((MusicListEntity.apply _).tupled, MusicListEntity.unapply)
   }
