@@ -14,6 +14,7 @@ import co.lischka.musiclist.restapi.services.{SearchService, AuthService, UsersS
 import io.circe.generic.auto._
 import io.circe.syntax._
 
+/*
 class SearchServiceRoute(val searchService: SearchService)(implicit executionContext: ExecutionContext) extends CirceSupport {
   val route = pathPrefix("results"){
     pathEndOrSingleSlash {
@@ -26,3 +27,6 @@ class SearchServiceRoute(val searchService: SearchService)(implicit executionCon
     }
   }
 }
+*/
+
+
