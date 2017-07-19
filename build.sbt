@@ -14,6 +14,11 @@ lazy val musicList = crossProject.in(file(".")).
     name := "foo",
     version := "0.1-SNAPSHOT"
   ).
+  jsSettings(
+    scalaJSUseMainModuleInitializer := true,
+    npmDependencies in Compile += "react-native-streaming-audio-player" -> "0.2.2"
+  ).
+  enablePlugins(ScalaJSBundlerPlugin).
   jvmSettings(
     libraryDependencies ++= {
       mainClass in(Compile, run) := Some("co.lischka.musiclist.restapi.Main")
@@ -44,8 +49,6 @@ lazy val musicList = crossProject.in(file(".")).
 
         "com.google.api-client" % "google-api-client" % "1.22.0",
         "com.google.apis" % "google-api-services-youtube" % "v3-rev182-1.22.0"
-
-
       )
     })
 

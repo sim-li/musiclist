@@ -28,6 +28,7 @@ object YoutubeParser {
         //val phoneNum: Option[String] = _phoneNum.getOption(json)
 
         val _id = root.items.index(0).id.videoId.string
+
         val id: Option[String] = _id.getOption(json)
 
         List(TrackEntity(

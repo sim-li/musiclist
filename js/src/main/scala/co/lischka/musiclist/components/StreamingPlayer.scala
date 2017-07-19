@@ -1,20 +1,30 @@
 package co.lischka.musiclist.components
 
+import co.lischka.musiclist.facades.{player, Player}
 import sri.core.{ReactElement, Component}
 import sri.navigation.NavigationScreenComponent
-
+import scala.scalajs.js
 import scala.scalajs.js.annotation.ScalaJSDefined
 import sri.universal.components._
 import scala.scalajs.js.Object
-
+import js.JSConverters._
 
 @ScalaJSDefined
 class StreamingPlayer extends NavigationScreenComponent[StreamingPlayer.Params, StreamingPlayer.State] {
   import StreamingPlayer._
   initialState(State(currentTime=0))
 
+
   def onPlay(): Unit = {
-    Player
+    player.play("http://pianosolo.streamguys.net/live.m3u", Map(
+      "title" -> "Aaron",
+      "artist" -> "Celine Dion",
+      "album_art_uri" -> "https://unsplash.it/300/300"
+    ).toJSDictionary)
+  }
+
+  def onPause(): Unit = {
+    player.pause()
   }
 
   override def render() = {
@@ -35,12 +45,6 @@ object StreamingPlayer {
   trait Params extends Object {
     val title: String
   }
-
-//  @ScalaJSDefined
-//  trait State extends Object {
-//    val currentTime: Int
-//  }
-
 
   case class State(currentTime: Int)
 }
