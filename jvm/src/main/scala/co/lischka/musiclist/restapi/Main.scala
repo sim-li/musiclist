@@ -11,6 +11,8 @@ import co.lischka.musiclist.restapi.utils.{Config, DatabaseService, FlywayServic
 import scala.concurrent.{Future, ExecutionContext}
 import scala.util.{Failure, Success}
 
+
+
 object Main extends App with Config {
   implicit val actorSystem = ActorSystem()
   implicit val executor: ExecutionContext = actorSystem.dispatcher
@@ -31,4 +33,11 @@ object Main extends App with Config {
   val httpService = new HttpService(usersService, authService, searchService)
 
   Http().bindAndHandle(httpService.routes, httpHost, httpPort)
+
+  import databaseService._
+  import databaseService.driver.api._
+
+  val schema = searchService.schema
+  db.run(DBIO.seq(
+    schema.create))
 }
