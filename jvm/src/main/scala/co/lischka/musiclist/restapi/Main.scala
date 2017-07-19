@@ -37,7 +37,9 @@ object Main extends App with Config {
   import databaseService._
   import databaseService.driver.api._
 
-  val schema = searchService.schema
-  db.run(DBIO.seq(
-    schema.create))
+ /* val setup = DBIO.seq(
+    // Create the tables, including primary and foreign keys
+    (track.schema).create)
+  val fin = db.run(setup)*/
 }
+

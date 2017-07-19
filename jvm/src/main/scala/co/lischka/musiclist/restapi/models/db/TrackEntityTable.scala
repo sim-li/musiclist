@@ -1,5 +1,6 @@
 package co.lischka.musiclist.restapi.models.db
 
+import co.lischka.musiclist.restapi.Main.databaseService
 import co.lischka.musiclist.restapi.utils.DatabaseService
 import co.lischka.musiclist.restapi.models.TrackEntity
 
