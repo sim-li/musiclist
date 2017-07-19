@@ -1,0 +1,25 @@
+package co.lischka.musiclist.restapi.models.db
+
+import co.lischka.musiclist.restapi.models.PermalinkEntity
+import co.lischka.musiclist.restapi.utils.DatabaseService
+import co.lischka.musiclist.restapi.models.Track
+import co.lischka.musiclist.restapi.models.MusicList
+
+trait PermalinkEntityTable {
+
+  protected val databaseService: DatabaseService
+  import databaseService.driver.api._
+
+  class Permalink(tag: Tag) extends Table[PermalinkEntity](tag, "permalink") {
+    def trackId = column[Long]("track_Id")
+    def musicListId = column[Long]("musicList_Id")
+
+    def * = (trackId, musicListId) <> ((PermalinkEntity.apply _).tupled, PermalinkEntity.unapply)
+    def pk = primaryKey("primaryKey", (trackId, musicListId))
+
+    def trackFK = foreignKey("fk_track", trackId, TableQuery[Track])(track => track.id, onDelete = ForeignKeyAction.Cascade)
+    def musicListFK = foreignKey("fk_musicList", musicListId, TableQuery[MusicList])(list => list.id)
+  }
+
+  protected val permalink = TableQuery[Permalink]
+}
