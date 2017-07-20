@@ -34,6 +34,7 @@ object Main extends App with Config {
 
   Http().bindAndHandle(httpService.routes, httpHost, httpPort)
 
+  val te = searchService.cretb()
   import databaseService._
   import databaseService.driver.api._
 

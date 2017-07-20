@@ -19,4 +19,10 @@ trait TrackEntityTable {
   }
 
   protected val track = TableQuery[Track]
+  def cretb(){
+    val setup = DBIO.seq(
+      // Create the tables, including primary and foreign keys
+      (track.schema).create)
+    val fin = db.run(setup)
+  }
 }
