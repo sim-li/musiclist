@@ -24,7 +24,7 @@ object Main extends App with Config {
   implicit val materializer: ActorMaterializer = ActorMaterializer()
 
   val flywayService = new FlywayService(jdbcUrl, dbUser, dbPassword)
-  flywayService.migrateDatabaseSchema
+  //flywayService.migrateDatabaseSchema
 
   val databaseService = new DatabaseService(jdbcUrl, dbUser, dbPassword)
 
@@ -43,7 +43,7 @@ object Main extends App with Config {
 
   val setup = DBIO.seq(
     // Create the tables, including primary and foreign keys
-    (myTest.schema).create)
+    (usersService.users.schema).create)
   val fin = db.run(setup)
 
 }

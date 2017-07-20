@@ -1,11 +1,10 @@
 package co.lischka.musiclist.restapi.models.db
 
+import co.lischka.musiclist.restapi.models.MyTestEntity
 import slick.jdbc.PostgresProfile.api._
 
-case class MyTestEntity(id: Int, name: String, street: String, city: String, state: String, zip: String)
-
 // Definition of the SUPPLIERS table
-class MyTest(tag: Tag) extends Table[MyTestEntity](tag, "SUPPLIERS") {
+class MyTest(tag: Tag) extends Table[MyTestEntity](tag, "MyTest") {
 
   def id = column[Int]("SUP_ID", O.PrimaryKey) // This is the primary key column
   def name = column[String]("SUP_NAME")
