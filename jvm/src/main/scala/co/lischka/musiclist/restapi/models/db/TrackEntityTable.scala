@@ -8,7 +8,7 @@ trait TrackEntityTable {
   protected val databaseService: DatabaseService
   import databaseService.driver.api._
 
-  class Tracks(tag: Tag) extends Table[TrackEntity](tag, "tracks"){
+  class Tracks(tag: Tag) extends Table[TrackEntity](tag, "track"){
     def id = column[Option[Long]]("id", O.PrimaryKey, O.AutoInc)
     def url = column[String]("url")
     def title = column[String]("title")

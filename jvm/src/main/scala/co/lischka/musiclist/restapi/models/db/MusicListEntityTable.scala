@@ -8,7 +8,7 @@ trait MusicListEntityTable {
   protected val databaseService: DatabaseService
   import databaseService.driver.api._
 
-  class MusicList(tag: Tag) extends Table[MusicListEntity](tag, "musicList"){
+  class MusicList(tag: Tag) extends Table[MusicListEntity](tag, "music_list"){
     def id = column[Option[Long]]("id", O.PrimaryKey, O.AutoInc)
     def permalink = column[String]("permalink")
 
