@@ -1,7 +1,7 @@
 package co.lischka.musiclist.restapi.parsers
 
 import akka.http.scaladsl.model.headers.LinkParams.title
-import co.lischka.musiclist.restapi.models.{YoutubeTrack, UserEntity, Track}
+import co.lischka.musiclist.restapi.models.{TrackEntity, UserEntity}
 import io.circe.parser._
 import io.circe.optics.JsonPath._
 import io.circe.optics.JsonPath._
@@ -9,7 +9,7 @@ import io.circe.optics.JsonPath._
 
 
 object YoutubeParser {
-  def parseTracks(inp: String): List[Track]  = {
+  def parseTracks(inp: String): List[TrackEntity]  = {
     UserEntity(username="abc", password="def")
 
     println("Input is")
@@ -28,9 +28,10 @@ object YoutubeParser {
         //val phoneNum: Option[String] = _phoneNum.getOption(json)
 
         val _id = root.items.index(0).id.videoId.string
+
         val id: Option[String] = _id.getOption(json)
 
-        List(YoutubeTrack(
+        List(TrackEntity(
           url=s"http://test.de/${id}",
           title="My cool title",
           description="A description"

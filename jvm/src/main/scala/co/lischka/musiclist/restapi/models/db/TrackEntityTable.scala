@@ -1,5 +1,6 @@
 package co.lischka.musiclist.restapi.models.db
 
+import co.lischka.musiclist.restapi.Main.databaseService
 import co.lischka.musiclist.restapi.utils.DatabaseService
 import co.lischka.musiclist.restapi.models.TrackEntity
 
@@ -18,4 +19,10 @@ trait TrackEntityTable {
   }
 
   protected val track = TableQuery[Track]
+  def cretb(){
+    val setup = DBIO.seq(
+      // Create the tables, including primary and foreign keys
+      (track.schema).create)
+    val fin = db.run(setup)
+  }
 }

@@ -1,10 +1,12 @@
 package co.lischka.musiclist.restapi.services
 
 import co.lischka.musiclist.restapi.models.db.UserEntityTable
+import co.lischka.musiclist.restapi.models.db.TrackEntityTable
 import co.lischka.musiclist.restapi.models.{UserEntity, UserEntityUpdate}
 import co.lischka.musiclist.restapi.utils.DatabaseService
 
 import scala.concurrent.{ExecutionContext, Future}
+
 
 class UsersService(val databaseService: DatabaseService)(implicit executionContext: ExecutionContext) extends UserEntityTable {
 

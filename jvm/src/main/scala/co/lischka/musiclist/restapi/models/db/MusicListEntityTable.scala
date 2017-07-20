@@ -17,6 +17,5 @@ trait MusicListEntityTable {
   }
 
   val musicList = TableQuery[MusicList]
-  val schema = musicList.schema
 
 }

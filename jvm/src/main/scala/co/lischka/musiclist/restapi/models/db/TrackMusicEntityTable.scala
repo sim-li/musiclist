@@ -1,4 +1,4 @@
-package co.lischka.musiclist.restapi.models.db
+/*package co.lischka.musiclist.restapi.models.db
 
 import co.lischka.musiclist.restapi.models.TrackMusicEntity
 import co.lischka.musiclist.restapi.utils.DatabaseService
@@ -15,9 +15,10 @@ trait TrackMusicEntityTable {
     def * = (trackId, musicListId) <> ((TrackMusicEntity.apply _).tupled, TrackMusicEntity.unapply)
     def pk = primaryKey("primaryKey", (trackId, musicListId))
 
-    def trackFK = foreignKey("fk_track", trackId, TableQuery[TrackMusicEntity])(track => track.id, onDelete = ForeignKeyAction.Cascade)
-    def musicListFK = foreignKey("fk_musicList", musicListId, TableQuery[MusicListEn])(list => list.id)
+    def trackFK = foreignKey("fk_track", trackId, TableQuery[Track])(track => track.id, onDelete = ForeignKeyAction.Cascade)
+    def musicListFK = foreignKey("fk_musicList", musicListId, TableQuery[MusicList])(list => list.id)
   }
 
   protected val permalink = TableQuery[Permalink]
 }
+*/
