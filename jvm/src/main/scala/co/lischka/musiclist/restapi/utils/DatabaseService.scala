@@ -1,5 +1,6 @@
 package co.lischka.musiclist.restapi.utils
 
+import co.lischka.musiclist.restapi.models.db.TrackEntityTable
 import com.zaxxer.hikari.{HikariConfig, HikariDataSource}
 
 class DatabaseService(jdbcUrl: String, dbUser: String, dbPassword: String) {
@@ -10,8 +11,10 @@ class DatabaseService(jdbcUrl: String, dbUser: String, dbPassword: String) {
 
   private val dataSource = new HikariDataSource(hikariConfig)
 
-  val driver = slick.driver.PostgresDriver
+  val driver = slick.jdbc.PostgresProfile
+
   import driver.api._
+
   val db = Database.forDataSource(dataSource)
   db.createSession()
 }

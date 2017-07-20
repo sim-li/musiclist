@@ -14,7 +14,7 @@ class SearchService() (
   implicit executionContext: ExecutionContext,
   system: akka.actor.ActorSystem,
   materializer: ActorMaterializer
-)extends TrackEntityTable{
+){
 
   def search(title: String): Future[List[TrackEntity]] = {
     val youtubeUri = s"https://www.googleapis.com/youtube/v3/search/?q=${title}&maxResults=25&part=snippet&key=" +
@@ -26,7 +26,5 @@ class SearchService() (
     } yield YoutubeParser.parseTracks(bytes.utf8String)
     f
   }
-val t = cretb()
-
 
 }
