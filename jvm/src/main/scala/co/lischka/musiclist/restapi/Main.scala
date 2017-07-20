@@ -36,15 +36,14 @@ object Main extends App with Config {
 
   Http().bindAndHandle(httpService.routes, httpHost, httpPort)
 
-  import slick.jdbc.PostgresProfile.api._
   import databaseService._
+  import databaseService.driver.api._
 
-  val suppliers = TableQuery[MyTest]
-
+  val myTest = TableQuery[MyTest]
 
   val setup = DBIO.seq(
     // Create the tables, including primary and foreign keys
-    (suppliers.schema).create)
+    (myTest.schema).create)
   val fin = db.run(setup)
 
 }
