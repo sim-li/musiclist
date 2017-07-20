@@ -3,7 +3,6 @@ package co.lischka.musiclist.restapi.models.db
 import co.lischka.musiclist.restapi.utils.DatabaseService
 import co.lischka.musiclist.restapi.models.MusicListEntity
 
-
 trait MusicListEntityTable {
 
   protected val databaseService: DatabaseService

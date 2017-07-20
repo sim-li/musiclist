@@ -19,6 +19,6 @@ trait TrackMusicEntityTable {
     def musicListFK = foreignKey("fk_musicList", musicListId, TableQuery[MusicList])(list => list.id)
   }
 
-  protected val permalink = TableQuery[Permalink]
+  val permalink = TableQuery[Permalink]
 }
 */

@@ -5,10 +5,9 @@ import akka.event.{Logging, LoggingAdapter}
 import akka.http.scaladsl.Http
 import akka.stream.ActorMaterializer
 import co.lischka.musiclist.restapi.http.HttpService
-import co.lischka.musiclist.restapi.models.UserEntity
-import co.lischka.musiclist.restapi.models.db.{MyTest}
-import co.lischka.musiclist.restapi.services.{AuthService, SearchService, UsersService}
+import co.lischka.musiclist.restapi.services.{AuthService, SearchService, TracksService, UsersService}
 import co.lischka.musiclist.restapi.utils.{Config, DatabaseService, FlywayService}
+
 import scala.concurrent.{ExecutionContext, Future}
 import scala.util.{Failure, Success}
 
@@ -32,18 +31,17 @@ object Main extends App with Config {
   val authService = new AuthService(databaseService)(usersService)
 
   val searchService = new SearchService()
-  val httpService = new HttpService(usersService, authService, searchService)
+  val tracksService = new TracksService(databaseService)
+  val httpService = new HttpService(usersService, authService, searchService, tracksService)
 
   Http().bindAndHandle(httpService.routes, httpHost, httpPort)
 
   import databaseService._
   import databaseService.driver.api._
 
-  val myTest = TableQuery[MyTest]
-
   val setup = DBIO.seq(
     // Create the tables, including primary and foreign keys
-    (usersService.users.schema).create)
+    (usersService.users.schema ++ tracksService.tracks.schema).create)
   val fin = db.run(setup)
 
 }
