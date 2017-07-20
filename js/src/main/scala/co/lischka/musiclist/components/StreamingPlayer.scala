@@ -10,9 +10,10 @@ import scala.scalajs.js.Object
 import js.JSConverters._
 
 @ScalaJSDefined
-class StreamingPlayer extends NavigationScreenComponent[StreamingPlayer.Params, StreamingPlayer.State] {
-  import StreamingPlayer._
-  initialState(State(currentTime=0))
+class StreamingPlayer extends NavigationScreenComponent[PlayerScreen.Params, PlayerScreen.State] {
+  import PlayerScreen._
+
+  //initialState(State(currentTime=0))
 
 
   def onPlay(): Unit = {

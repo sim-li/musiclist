@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation.JSImport.Namespace
 
 //"react-native-streaming-audio-player
 
-@JSImport("node-uuid/uuid", Namespace)
+@JSImport("react-native-streaming-audio-player", Namespace)
 @js.native
 object player extends Player
 

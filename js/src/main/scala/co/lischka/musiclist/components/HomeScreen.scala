@@ -14,18 +14,22 @@ class HomeScreen extends NavigationScreenComponentNoPS {
   import HomeScreen._
   def render() = {
     View(style = styles.container)(
-      getBlock(() =>
-                 navigation.navigate[ScreenWithParams](new Params {
-                   override val title: String = "Parse some tracks"
-                 }),
-               "Get it on"),
-
-      getBlock(() => navigation.navigate[ScreenWithCustomRightButton],
-               "Screen With Right Button"),
-
-      getBlock(() => navigation.navigate[StreamingPlayer] _, "Player"),
-
-      getBlock(() => navigation.navigate[AboutScreen], "About Screen")
+      //usage
+      PlayerScreen(PlayerScreen.Props("Scala.js"))
+//      new ScreenWithParams(Params(title: String = "Parse some tracks"
+//      ))
+//      getBlock(() =>
+//                 navigation.navigate[ScreenWithParams](new Params {
+//                   override val title: String = "Parse some tracks"
+//                 }),
+//               "Get it on"),
+//
+//      getBlock(() => navigation.navigate[ScreenWithCustomRightButton],
+//               "Screen With Right Button"),
+//
+//      getBlock(() => navigation.navigate[StreamingPlayer] _, "Player"),
+//
+//      getBlock(() => navigation.navigate[AboutScreen], "About Screen")
     )
   }
 

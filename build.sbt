@@ -11,7 +11,7 @@ lazy val root = project.in(file(".")).
 
 lazy val musicList = crossProject.in(file(".")).
   settings(
-    name := "foo",
+    name := "musicList",
     version := "0.1-SNAPSHOT"
   ).
   jsSettings(

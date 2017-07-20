@@ -1,10 +1,9 @@
 package co.lischka.musiclist.components
 
-import sri.navigation.{NavigationScreenOptions, _}
+import sri.navigation._
 import sri.universal.apis.InteractionManager
 import sri.universal.components._
-
-import scala.scalajs.js.annotation.{JSExportStatic, ScalaJSDefined}
+import scala.scalajs.js.annotation.{ScalaJSDefined}
 
 @ScalaJSDefined
 class LazyLoadScreen extends NavigationScreenComponentS[LazyLoadScreen.State] {
