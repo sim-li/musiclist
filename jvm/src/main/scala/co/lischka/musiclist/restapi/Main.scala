@@ -5,13 +5,12 @@ import akka.event.{Logging, LoggingAdapter}
 import akka.http.scaladsl.Http
 import akka.stream.ActorMaterializer
 import co.lischka.musiclist.restapi.http.HttpService
-import co.lischka.musiclist.restapi.services.{AuthService, SearchService, TracksService, UsersService, MusicListService, TrackAtListService}
+import co.lischka.musiclist.restapi.models.{MusicListEntity, TrackEntity, UserEntity}
+import co.lischka.musiclist.restapi.services.{AuthService, MusicListService, SearchService, TrackAtListService, TracksService, UsersService}
 import co.lischka.musiclist.restapi.utils.{Config, DatabaseService, FlywayService}
 
 import scala.concurrent.{ExecutionContext, Future}
 import scala.util.{Failure, Success}
-
-
 
 
 object Main extends App with Config {
@@ -46,4 +45,10 @@ object Main extends App with Config {
     (usersService.users.schema ++ tracksService.tracks.schema ++ musicListService.musicList.schema ++ trackAtListService.trackAtList.schema).create)
   val fin = db.run(setup)
 
+  val u = new UserEntity(username = "test", password = "test")
+  authService.signUp(u)
+  val t = new TrackEntity(url = "www", title = "title", description = "pop")
+  tracksService.createTrack(t)
+  val l = new MusicListEntity(permalink = "www.xyz.se")
+  musicListService.createList(l)
 }
