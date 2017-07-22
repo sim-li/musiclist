@@ -1,17 +1,15 @@
 package co.lischka.musiclist.facades
 
 import scala.scalajs.js
-import scala.scalajs.js.annotation.{JSImport, JSGlobal}
+import scala.scalajs.js.annotation.{JSImport}
 import scala.scalajs.js.annotation.JSImport.Namespace
 
 //"react-native-streaming-audio-player
 
 @JSImport("react-native-streaming-audio-player", Namespace)
+//@JSImport("react-native-streaming-audio-player", "RNAudioPlayer")
 @js.native
-object player extends Player
-
-@js.native
-trait Player extends js.Object {
+object player extends js.Object {
 
   def play(streamUrl: String, metadata: js.Dictionary[String]): Unit = js.native
 

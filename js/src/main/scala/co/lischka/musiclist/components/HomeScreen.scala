@@ -15,7 +15,6 @@ class HomeScreen extends NavigationScreenComponentNoPS {
   def render() = {
     View(style = styles.container)(
       //usage
-      PlayerScreen(PlayerScreen.Props("Scala.js"))
 //      new ScreenWithParams(Params(title: String = "Parse some tracks"
 //      ))
 //      getBlock(() =>

@@ -2,33 +2,21 @@ package co.lischka.musiclist.components
 
 import co.lischka.musiclist.facades.player
 import sri.core.Component
+import sri.navigation.NavigationScreenComponent
 import sri.universal.components._
+import scala.scalajs.js
 import scala.scalajs.js.Object
 import scala.scalajs.js.annotation.ScalaJSDefined
+import js.JSConverters._
 
 
-//@ScalaJSDefined
-//class PlayerScreen extends ComponentP[PlayerScreen.Props] {
-//  def render() = {
-//    Text(s"Hello ${props.name}")
-//  }
-//}
-//
-//object PlayerScreen {
-//  case class Props(name : String)
-//  def apply(props:Props) = CreateElement[PlayerScreen](props)
-//}
-
+//https://github.com/scalajs-react-interface/sri/blob/master/docs/DefiningComponents.md
 @ScalaJSDefined
-class PlayerScreen extends Component[PlayerScreen.Params, PlayerScreen.State] {
-  import PlayerScreen._
+class PlayerScreen extends NavigationScreenComponent[PlayerScreen.Params, PlayerScreen.State] {
+  import PlayerScreen.State
 
-  //jsSetState(State(currentTime=0))
+  initialState(State(currentTime=0))
 
-  setState(State(currentTime=0))
-
-
-  //jsSetState
   def onPlay(): Unit = {
     player.play("http://pianosolo.streamguys.net/live.m3u", Map(
       "title" -> "Aaron",
@@ -44,10 +32,17 @@ class PlayerScreen extends Component[PlayerScreen.Params, PlayerScreen.State] {
   override def render() = {
     View(style = GlobalStyles.wholeContainer)(
       Text("Secreen loaded"),
-      Button(title = "Set New Params",
-        onPress = () =>
-          onPlay()
+      Button(title = "Play", onPress = () => {
+        print("Calling pause")
+        player.pause()
+//        player.play("http://pianosolo.streamguys.net/live.m3u", Map(
+//          "title" -> "Aaron",
+//          "artist" -> "Celine Dion",
+//          "album_art_uri" -> "https://unsplash.it/300/300"
+//        ).toJSDictionary)
+      }
 
+      )
     )
   }
 }
