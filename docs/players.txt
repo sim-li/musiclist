@@ -1,0 +1,11 @@
+
+
+https://github.com/tlenclos/react-native-audio-streaming
+Interacts nicely with Naive UI
+
+https://github.com/AllThatSeries/react-native-streaming-audio-player
+Unknown.
+
+
+https://github.com/zmxv/react-native-sound
+No nice interface, one would have to implement one.

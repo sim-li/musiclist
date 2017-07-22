@@ -11,14 +11,14 @@ lazy val root = project.in(file(".")).
 
 lazy val musicList = crossProject.in(file(".")).
   settings(
-    name := "foo",
+    name := "musicList",
     version := "0.1-SNAPSHOT"
   ).
+  enablePlugins(ScalaJSBundlerPlugin).
   jsSettings(
     scalaJSUseMainModuleInitializer := true,
     npmDependencies in Compile += "react-native-streaming-audio-player" -> "0.2.2"
   ).
-  enablePlugins(ScalaJSBundlerPlugin).
   jvmSettings(
     libraryDependencies ++= {
       mainClass in(Compile, run) := Some("co.lischka.musiclist.restapi.Main")

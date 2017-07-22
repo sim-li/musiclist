@@ -15,23 +15,24 @@ package object components {
         headerStyle = GlobalStyles.defaultHeader
       )
     ),
-    registerStackScreen[HomeScreen](navigationOptions = NavigationStackScreenOptions(title = "Scala.js Home")),
-    registerStackScreen[ScreenWithParams](navigationOptionsDynamic = (props:NavigationScreenConfigProps[ScreenWithParams]) => NavigationStackScreenOptions(title = props.navigation.state.params.map(_.title).getOrElse("").toString)),
-    registerStackScreen[ScreenWithCustomRightButton](navigationOptions = NavigationStackScreenOptions(
-      title = "Custom Right",
-      headerRight = Button(title = "Right",
-        color = if (SriPlatform.isIOS) "white" else "#546E7A",
-        onPress = () =>
-          Alert.alert(title = "Alert",
-            message = "You just pressed right button!"))
-    )
-    ),
-    registerStackScreen[LazyLoadScreen](navigationOptions = NavigationStackScreenOptions(
-      title = "Lazy Load"
-    )),
-    registerStackScreen[AboutScreen](navigationOptions = NavigationStackScreenOptions(
-      title = "About"
-    ))
+    registerStackScreen[PlayerScreen](navigationOptions = NavigationStackScreenOptions(title = "Home"))
+//    registerStackScreen[HomeScreen](navigationOptions = NavigationStackScreenOptions(title = "Scala.js Home")),
+//    registerStackScreen[ScreenWithParams](navigationOptionsDynamic = (props:NavigationScreenConfigProps[ScreenWithParams]) => NavigationStackScreenOptions(title = props.navigation.state.params.map(_.title).getOrElse("").toString)),
+//    registerStackScreen[ScreenWithCustomRightButton](navigationOptions = NavigationStackScreenOptions(
+//      title = "Custom Right",
+//      headerRight = Button(title = "Right",
+//        color = if (SriPlatform.isIOS) "white" else "#546E7A",
+//        onPress = () =>
+//          Alert.alert(title = "Alert",
+//            message = "You just pressed right button!"))
+//    )
+//    ),
+//    registerStackScreen[LazyLoadScreen](navigationOptions = NavigationStackScreenOptions(
+//      title = "Lazy Load"
+//    )),
+//    registerStackScreen[AboutScreen](navigationOptions = NavigationStackScreenOptions(
+//      title = "About"
+//    ))
   )
 
 }
