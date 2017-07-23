@@ -5,7 +5,7 @@ import akka.event.{Logging, LoggingAdapter}
 import akka.http.scaladsl.Http
 import akka.stream.ActorMaterializer
 import co.lischka.musiclist.restapi.http.HttpService
-import co.lischka.musiclist.restapi.models.{MusicListEntity, TrackEntity, UserEntity}
+import co.lischka.musiclist.restapi.models.{MusicListEntity, TrackEntity, TrackMusicEntity, UserEntity}
 import co.lischka.musiclist.restapi.services.{AuthService, MusicListService, SearchService, TrackAtListService, TracksService, UsersService}
 import co.lischka.musiclist.restapi.utils.{Config, DatabaseService, FlywayService}
 
@@ -45,10 +45,35 @@ object Main extends App with Config {
     (usersService.users.schema ++ tracksService.tracks.schema ++ musicListService.musicList.schema ++ trackAtListService.trackAtList.schema).create)
   val fin = db.run(setup)
 
-  val u = new UserEntity(username = "test", password = "test")
+  /*val u = new UserEntity(username = "test", password = "test")
   authService.signUp(u)
   val t = new TrackEntity(url = "www", title = "title", description = "pop")
-  tracksService.createTrack(t)
-  val l = new MusicListEntity(permalink = "www.xyz.se")
-  musicListService.createList(l)
+  tracksService.createTrack(t)*/
+
+
+  // Save list from database
+  //val l = new MusicListEntity(permalink = "www.xyz.se")
+  //musicListService.createList(l)
+
+  /*val someEntry = musicListService.getListById(6L) map {
+    case Some(ml) => musicListService.updateList(ml.copy(permalink = "1new_www.xyz.se"))
+    case None => print("error")
+  }*/
+
+  /*val muli = new MusicListEntity(permalink = "www.abc.se")
+  val cremuli = new TrackEntity(url = "www", title = "title", description = "rock")
+  val me = new TrackMusicEntity(Some(5L), Some(3L))
+  tracksService.createTrackAtList(me)
+  tracksService.deleteTrack(1L)*/
+
+  /*val list1 = new MusicListEntity(permalink = "www.com")
+  val list2 = new MusicListEntity(permalink = "www.com.de")
+  val cremuli = new TrackEntity(url = "www", title = "title", description = "jazz")
+  val cremul = new TrackEntity(url = "www", title = "title", description = "house")
+  tracksService.insertTrackAtList(cremuli, Seq(3L))
+  tracksService.insertTrackAtList(cremul, Seq(3L))
+  musicListService.insertListAtTrack(list1, Seq(10L))
+  musicListService.insertListAtTrack(list2, Seq(10L))
+*/
+
 }
