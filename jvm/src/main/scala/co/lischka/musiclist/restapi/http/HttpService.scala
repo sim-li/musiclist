@@ -17,7 +17,7 @@ class HttpService(usersService: UsersService,
                  )(implicit executionContext: ExecutionContext,
                    system: akka.actor.ActorSystem,
                    materializer: ActorMaterializer
-  ) extends CorsSupport {
+                 ) extends CorsSupport {
 
   val usersRouter = new UsersServiceRoute(authService, usersService)
   val authRouter = new AuthServiceRoute(authService)
@@ -27,8 +27,8 @@ class HttpService(usersService: UsersService,
     pathPrefix("v1") {
       corsHandler {
         usersRouter.route ~
-        authRouter.route ~
-        searchRouter.route
+          authRouter.route ~
+          searchRouter.route
       }
     }
 }

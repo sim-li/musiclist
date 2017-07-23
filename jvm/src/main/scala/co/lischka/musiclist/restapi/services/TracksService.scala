@@ -1,9 +1,9 @@
 package co.lischka.musiclist.restapi.services
 
-import co.lischka.musiclist.restapi.models.{MusicListEntity, TrackEntity, TrackMusicEntity, UserEntity}
+import co.lischka.musiclist.restapi.models.{TrackEntity, TrackMusicEntity}
 import co.lischka.musiclist.restapi.models.db.{TrackEntityTable, TrackMusicEntityTable}
 import co.lischka.musiclist.restapi.utils.DatabaseService
-import co.lischka.musiclist.restapi.services.MusicListService
+
 
 import scala.concurrent.{ExecutionContext, Future}
 
@@ -67,17 +67,17 @@ class TracksService(val databaseService: DatabaseService)(implicit executionCont
 
   //def insertTrackAtList(track: TrackEntity, musiclist: MusicListEntity): Future[Option[TrackMusicEntity]] = {
 
-  // Inspiration (probably not relevant, resolves Future[Option[...:
-  // val someEntry = musicListService.getListById(5L) map {       <--- repl. with createTrack...
-  // case Some(ml) => musicListService.updateList(ml.copy(permalink = "new_www.xyz.se"))
-  // case None => print("Abc")
-  // }
+    // Inspiration (probably not relevant, resolves Future[Option[...:
+    // val someEntry = musicListService.getListById(5L) map {       <--- repl. with createTrack...
+    // case Some(ml) => musicListService.updateList(ml.copy(permalink = "new_www.xyz.se"))
+    // case None => print("Abc")
+    // }
 
-  // ...createTrack()....map ( linkTracksWithMusicList(musicList.id, Seq(_.id) ) //should resolve Future[
+    // ...createTrack()....map ( linkTracksWithMusicList(musicList.id, Seq(_.id) ) //should resolve Future[
 
-  // Create Track <- get back track id, put into Seq(trackId)
-  // Search MusicList <- get MusicList id
-  // linkTracksWithMusicList( ..., ... )
+    // Create Track <- get back track id, put into Seq(trackId)
+    // Search MusicList <- get MusicList id
+    // linkTracksWithMusicList( ..., ... )
 
   //}
 }

@@ -6,7 +6,8 @@ import co.lischka.musiclist.restapi.utils.DatabaseService
 
 import scala.concurrent.{ExecutionContext, Future}
 
-class MusicListService(val databaseService: DatabaseService)(implicit executionContext: ExecutionContext) extends MusicListEntityTable with TrackMusicEntityTable{
+class MusicListService(val databaseService: DatabaseService)(implicit executionContext: ExecutionContext) extends MusicListEntityTable with TrackMusicEntityTable {
+
   import databaseService._
   import databaseService.driver.api._
 
@@ -22,9 +23,9 @@ class MusicListService(val databaseService: DatabaseService)(implicit executionC
     listUpdate.id match {
       case Some(id) => {
         val result = db.run(musicList.filter(_.id === listUpdate.id).update(listUpdate))
-          // Result handling
-        result.flatMap (nRowsAffected =>
-        if (nRowsAffected <= 0) Future(None) else getListById(listUpdate.id.get)
+        // Result handling
+        result.flatMap(nRowsAffected =>
+          if (nRowsAffected <= 0) Future(None) else getListById(listUpdate.id.get)
         )
       }
       case None => Future(None)
