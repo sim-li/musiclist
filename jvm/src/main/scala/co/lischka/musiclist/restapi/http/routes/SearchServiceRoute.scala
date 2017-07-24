@@ -14,7 +14,7 @@ import io.circe.syntax._
 
 
 class SearchServiceRoute(val searchService: SearchService)(implicit executionContext: ExecutionContext) extends CirceSupport {
-  val route = pathPrefix("results"){
+  val route = pathPrefix("results") {
     pathEndOrSingleSlash {
       get {
         parameters("search_query") { (searchQuery) =>

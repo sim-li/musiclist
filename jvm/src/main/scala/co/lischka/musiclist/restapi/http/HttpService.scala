@@ -2,7 +2,7 @@ package co.lischka.musiclist.restapi.http
 
 import akka.http.scaladsl.server.Directives._
 import akka.stream.ActorMaterializer
-import co.lischka.musiclist.restapi.http.routes.{AuthServiceRoute, SearchServiceRoute, UsersServiceRoute}
+import co.lischka.musiclist.restapi.http.routes.{AuthServiceRoute, SearchServiceRoute, UsersServiceRoute, TracksServiceRoute, MusicListServiceRoute}
 import co.lischka.musiclist.restapi.services._
 import co.lischka.musiclist.restapi.utils.CorsSupport
 
@@ -22,13 +22,17 @@ class HttpService(usersService: UsersService,
   val usersRouter = new UsersServiceRoute(authService, usersService)
   val authRouter = new AuthServiceRoute(authService)
   val searchRouter = new SearchServiceRoute(searchService)
+  val trackRouter = new TracksServiceRoute(tracksService)
+  val musicListRouter = new MusicListServiceRoute(musicListService)
 
   val routes =
     pathPrefix("v1") {
       corsHandler {
         usersRouter.route ~
           authRouter.route ~
-          searchRouter.route
+          searchRouter.route ~
+          trackRouter.route ~
+          musicListRouter.route
       }
     }
 }

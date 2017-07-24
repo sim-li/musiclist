@@ -1,14 +1,14 @@
 package co.lischka.musiclist.restapi.services
 
-import co.lischka.musiclist.restapi.models.{TrackEntity, TrackMusicEntity}
-import co.lischka.musiclist.restapi.models.db.{TrackEntityTable, TrackMusicEntityTable}
+import co.lischka.musiclist.restapi.models.{TrackEntity, TrackAtListEntity}
+import co.lischka.musiclist.restapi.models.db.{TrackEntityTable, TrackAtListEntityTable}
 import co.lischka.musiclist.restapi.utils.DatabaseService
 
 
 import scala.concurrent.{ExecutionContext, Future}
 
 
-class TracksService(val databaseService: DatabaseService)(implicit executionContext: ExecutionContext) extends TrackEntityTable with TrackMusicEntityTable {
+class TracksService(val databaseService: DatabaseService)(implicit executionContext: ExecutionContext) extends TrackEntityTable with TrackAtListEntityTable {
 
   import databaseService._
   import databaseService.driver.api._
@@ -34,7 +34,7 @@ class TracksService(val databaseService: DatabaseService)(implicit executionCont
     }
   }
 
-  def createTrackAtList(trMuList: TrackMusicEntity): Future[TrackMusicEntity] = db.run(trackAtList returning trackAtList += trMuList)
+  def createTrackAtList(trMuList: TrackAtListEntity): Future[TrackAtListEntity] = db.run(trackAtList returning trackAtList += trMuList)
 
   def insertTrackAtList(track: TrackEntity, musicListIds: Seq[Long]) = {
     createTrack(track) flatMap { track =>
@@ -45,7 +45,7 @@ class TracksService(val databaseService: DatabaseService)(implicit executionCont
   def linkTracksWithMusicList(musicListId: Long, trackIds: Seq[Long]) = {
     existAllTracks(trackIds) flatMap {
       case true =>
-        db.run(trackAtList ++= trackIds.map((id: Long) => TrackMusicEntity(Some(musicListId), Some[Long](id))))
+        db.run(trackAtList ++= trackIds.map((id: Long) => TrackAtListEntity(Some(musicListId), Some[Long](id))))
       case false => Future(None)
     }
   }
