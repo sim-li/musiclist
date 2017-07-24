@@ -32,11 +32,11 @@ class MusicListService(val databaseService: DatabaseService)(implicit executionC
     }
   }
 
-  def insertListAtTrack(musicListEntity: MusicListEntity, trackIds: Seq[Long]) = {
+  /*def insertListAtTrack(musicListEntity: MusicListEntity, trackIds: Seq[Long]) = {
     createList(musicListEntity) flatMap { list =>
       linkMusicListWithTracks(list.id.get, trackIds)
     }
-  }
+  }*/
 
   def linkMusicListWithTracks(trackId: Long, musicListId: Seq[Long]) = {
     existAllLists(musicListId) flatMap {

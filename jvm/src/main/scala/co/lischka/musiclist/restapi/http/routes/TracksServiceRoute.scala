@@ -2,7 +2,6 @@ package co.lischka.musiclist.restapi.http.routes
 
 import akka.http.scaladsl.model.StatusCodes
 import akka.http.scaladsl.server.Directives._
-import akka.http.scaladsl.server.PathMatchers.IntNumber
 import de.heikoseeberger.akkahttpcirce.CirceSupport
 import co.lischka.musiclist.restapi.models.TrackEntity
 import co.lischka.musiclist.restapi.services.TracksService
@@ -16,11 +15,11 @@ class TracksServiceRoute(val tracksService: TracksService)(implicit executionCon
   import StatusCodes._
   import tracksService._
 
-  val route =
-    (path("tracks") & get) {
+  val route = pathPrefix("musicList") {
+    (path("track") & get) {
       complete(getTracks().map(_.asJson))
     } ~
-      (path("track" / IntNumber) & get) { id =>
+      (path("track" / LongNumber) & get) { id =>
         complete(getTrackById(id).map(_.asJson))
       } ~
       (path("track") & post) {
@@ -33,7 +32,8 @@ class TracksServiceRoute(val tracksService: TracksService)(implicit executionCon
           complete(updateTrack(track).map(_.asJson))
         }
       } ~
-      (path("track" / IntNumber) & delete) { trackId =>
+      (path("track" / LongNumber) & delete) { trackId =>
         complete(deleteTrack(trackId).map(_.asJson))
       }
+  }
 }

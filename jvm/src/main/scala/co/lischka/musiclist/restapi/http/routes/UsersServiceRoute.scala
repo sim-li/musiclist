@@ -20,10 +20,10 @@ class UsersServiceRoute(val authService: AuthService,
   import usersService._
 
   val route =
-    (path("users") & get) {
+    (path("user") & get) {
       complete(getUsers().map(_.asJson))
     } ~
-      (path("user" / IntNumber) & get) { id =>
+      (path("user" / LongNumber) & get) { id =>
         complete(getUserById(id).map(_.asJson))
       } ~
       (path("user") & post) {
@@ -31,7 +31,7 @@ class UsersServiceRoute(val authService: AuthService,
           complete(createUser(user).map(_.asJson))
         }
       } ~
-      (path("user" / IntNumber) & delete) { userId =>
+      (path("user" / LongNumber) & delete) { userId =>
         complete(deleteUser(userId).map(_.asJson))
       }
 
