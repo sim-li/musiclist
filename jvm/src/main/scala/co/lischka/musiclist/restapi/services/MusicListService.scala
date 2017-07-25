@@ -1,13 +1,15 @@
 package co.lischka.musiclist.restapi.services
 
-import co.lischka.musiclist.restapi.models.{MusicListEntity, TrackAtListEntity}
-import co.lischka.musiclist.restapi.models.db.{MusicListEntityTable, TrackAtListEntityTable}
+import co.lischka.musiclist.restapi.models.{MusicListEntity, TrackAtListEntity, TrackEntity}
+import co.lischka.musiclist.restapi.models.db.{MusicListEntityTable, TrackAtListEntityTable, TrackEntityTable}
 import co.lischka.musiclist.restapi.utils.DatabaseService
+import co.lischka.musiclist.restapi.services.TracksService
 
 import scala.concurrent.{ExecutionContext, Future}
 
-class MusicListService(val databaseService: DatabaseService)(implicit executionContext: ExecutionContext) extends MusicListEntityTable with TrackAtListEntityTable {
+class MusicListService(val databaseService: DatabaseService, tracksService: TracksService)(implicit executionContext: ExecutionContext) extends MusicListEntityTable with TrackAtListEntityTable with TrackEntityTable {
 
+  import tracksService._
   import databaseService._
   import databaseService.driver.api._
 
@@ -18,6 +20,8 @@ class MusicListService(val databaseService: DatabaseService)(implicit executionC
   def deleteList(id: Long): Future[Int] = db.run(musicList.filter(_.id === id).delete)
 
   def createList(muList: MusicListEntity): Future[MusicListEntity] = db.run(musicList returning musicList += muList)
+
+  def getListByPermalink(permalink: String): Future[Option[MusicListEntity]] = db.run(musicList.filter(_.permalink === permalink).result.headOption)
 
   def updateList(listUpdate: MusicListEntity): Future[Option[MusicListEntity]] = {
     listUpdate.id match {
@@ -32,6 +36,13 @@ class MusicListService(val databaseService: DatabaseService)(implicit executionC
     }
   }
 
+  def getTracksAtList(permalink: String): Future[Seq[TrackEntity]] = {
+    getListByPermalink(permalink) flatMap { muEntity =>
+      val tal: Future[TrackAtList] = db.run(trackAtList.filter(_.musicListId === muEntity.get.id))
+      tal.flatMap(l =>
+      getTrackById(l.trackId))
+    }
+  }
   /*def insertListAtTrack(musicListEntity: MusicListEntity, trackIds: Seq[Long]) = {
     createList(musicListEntity) flatMap { list =>
       linkMusicListWithTracks(list.id.get, trackIds)

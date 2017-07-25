@@ -17,58 +17,14 @@ class MusicListServiceRoute(val musicListService: MusicListService, tracksServic
   import tracksService._
 
   val route =
-  /*pathPrefix("musicList") {
-      pathEndOrSingleSlash {
-        get {
-          complete(getLists().map(_.asJson))
-        }
-      } ~
-        post {
-          entity(as[MusicListEntity]) { list =>
-            complete(createList(list).map(_.asJson))
-          }
-        } ~
-        put {
-          entity(as[MusicListEntity]) { list =>
-            complete(updateList(list).map(_.asJson))
-          }
-        } ~
-        pathPrefix(LongNumber) { id =>
-          pathEndOrSingleSlash {
-            get {
-              complete(getListById(id).map(_.asJson))
-            }
-          } ~
-            delete {
-              complete(deleteList(id).map(_.asJson))
-            } ~
-            post {
-              entity(as[TrackEntity]) { track =>
-                complete(insertTrackAtList(track, Seq(id)).map(_.asJson))
-              }
-            }
-        } ~
-        pathPrefix("tracks") {
-          pathEndOrSingleSlash {
-            get {
-              complete(getTracks().map(_.asJson))
-            }
-          } ~
-          pathPrefix(LongNumber) { id =>
-            pathEndOrSingleSlash {
-              get {
-                complete(getTrackById(id).map(_.asJson))
-              }
-            }
-          }
-        }
-    }
-}*/
     (path("musicList") & get) {
       complete(getLists().map(_.asJson))
     } ~
       (path("musicList" / LongNumber) & get) { id =>
         complete(getListById(id).map(_.asJson))
+      } ~
+      (path("musicList" / Segment) & get) { str =>
+        complete(getTracksAtList(str).map(_.asJson))
       } ~
       (path("musicList") & post) {
         entity(as[MusicListEntity]) { list =>
@@ -96,5 +52,54 @@ class MusicListServiceRoute(val musicListService: MusicListService, tracksServic
         }
       }
 }
+
+/*pathPrefix("musicList") {
+    pathEndOrSingleSlash {
+      get {
+        complete(getLists().map(_.asJson))
+      }
+    } ~
+      post {
+        entity(as[MusicListEntity]) { list =>
+          complete(createList(list).map(_.asJson))
+        }
+      } ~
+      put {
+        entity(as[MusicListEntity]) { list =>
+          complete(updateList(list).map(_.asJson))
+        }
+      } ~
+      pathPrefix(LongNumber) { id =>
+        pathEndOrSingleSlash {
+          get {
+            complete(getListById(id).map(_.asJson))
+          }
+        } ~
+          delete {
+            complete(deleteList(id).map(_.asJson))
+          } ~
+          post {
+            entity(as[TrackEntity]) { track =>
+              complete(insertTrackAtList(track, Seq(id)).map(_.asJson))
+            }
+          }
+      } ~
+      pathPrefix("tracks") {
+        pathEndOrSingleSlash {
+          get {
+            complete(getTracks().map(_.asJson))
+          }
+        } ~
+        pathPrefix(LongNumber) { id =>
+          pathEndOrSingleSlash {
+            get {
+              complete(getTrackById(id).map(_.asJson))
+            }
+          }
+        }
+      }
+  }
+}*/
+
 
 
