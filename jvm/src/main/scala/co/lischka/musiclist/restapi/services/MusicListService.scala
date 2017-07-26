@@ -7,7 +7,8 @@ import co.lischka.musiclist.restapi.services.TracksService
 
 import scala.concurrent.{ExecutionContext, Future}
 
-class MusicListService(val databaseService: DatabaseService, tracksService: TracksService)(implicit executionContext: ExecutionContext) extends MusicListEntityTable with TrackAtListEntityTable with TrackEntityTable {
+class MusicListService(val databaseService: DatabaseService, tracksService: TracksService)(implicit executionContext: ExecutionContext)
+  extends MusicListEntityTable with TrackAtListEntityTable with TrackEntityTable {
 
   import tracksService._
   import databaseService._
@@ -29,6 +30,7 @@ class MusicListService(val databaseService: DatabaseService, tracksService: Trac
         val result = db.run(musicList.filter(_.id === listUpdate.id).update(listUpdate))
         // Result handling
         result.flatMap(nRowsAffected =>
+          // Check if there's an alternative to get, it throws exceptions
           if (nRowsAffected <= 0) Future(None) else getListById(listUpdate.id.get)
         )
       }
@@ -39,19 +41,20 @@ class MusicListService(val databaseService: DatabaseService, tracksService: Trac
 
 
   def getTracksAtList(permalink: String): Future[Seq[TrackEntity]] = {
-    val ml = getMusicListByPermalink(permalink)
-    ml map { ml =>
-      getTrackAtListByMusicListId(ml.flatMap( m => m.id)) map  { tr =>
-
-        getTrackById(tr.map( t => t.trackId ))
-      }
-
-    }
+    for {
+      ml <- getMusicListByPermalink(permalink)
+      id <- ml.flatMap(m => m.id)
+      trackAtList <- getTrackAtListByMusicListId(id)
+      // Check if there's an alternative to get, it throws exceptions
+    } yield trackAtList.map(t => getTrackById(t.trackId.get))
   }
 
-  def getMusicListByPermalink(permalink: String): Future[Option[MusicListEntity]] = db.run(musicList.filter(_.permalink === permalink).result.headOption)
 
-  def getTrackAtListByMusicListId(id: Long): Future[Option[TrackAtList]] = db.run(trackAtList.filter(_.musicListId === id).result.headOption)
+  def getMusicListByPermalink(permalink: String): Future[Option[MusicListEntity]] =
+    db.run(musicList.filter(_.permalink === permalink).result.headOption)
+
+  def getTrackAtListByMusicListId(id: Long): Future[Option[TrackAtListEntity]] =
+    db.run(trackAtList.filter(_.musicListId === id).result.headOption)
 
 
   /*def insertListAtTrack(musicListEntity: MusicListEntity, trackIds: Seq[Long]) = {
