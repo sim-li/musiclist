@@ -5,6 +5,7 @@ import akka.http.scaladsl.model.{HttpRequest, HttpResponse}
 import akka.stream.ActorMaterializer
 import akka.util.ByteString
 import co.lischka.musiclist.restapi.models.TrackEntity
+import co.lischka.musiclist.restapi.models.db.TrackEntityTable
 import co.lischka.musiclist.restapi.parsers.YoutubeParser
 
 import scala.concurrent.{ExecutionContext, Future}
@@ -25,7 +26,5 @@ class SearchService() (
     } yield YoutubeParser.parseTracks(bytes.utf8String)
     f
   }
-
-
 
 }

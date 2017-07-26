@@ -18,5 +18,5 @@ trait TrackEntityTable {
     def * = (id, url, title, description) <> ((TrackEntity.apply _).tupled, TrackEntity.unapply)
   }
 
-  protected val track = TableQuery[Track]
+  val track = TableQuery[Track]
 }

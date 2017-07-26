@@ -6,17 +6,19 @@ import akka.http.scaladsl.Http
 import akka.stream.ActorMaterializer
 import co.lischka.musiclist.restapi.http.HttpService
 import co.lischka.musiclist.restapi.models.UserEntity
-import co.lischka.musiclist.restapi.services.{SearchService, AuthService, UsersService}
+import co.lischka.musiclist.restapi.models.db.{MyTest}
+import co.lischka.musiclist.restapi.services.{AuthService, SearchService, UsersService}
 import co.lischka.musiclist.restapi.utils.{Config, DatabaseService, FlywayService}
-import scala.concurrent.{Future, ExecutionContext}
+import scala.concurrent.{ExecutionContext, Future}
 import scala.util.{Failure, Success}
+
 
 
 
 object Main extends App with Config {
   implicit val actorSystem = ActorSystem()
   implicit val executor: ExecutionContext = actorSystem.dispatcher
-  
+
   implicit val log: LoggingAdapter = Logging(actorSystem, getClass)
 
   implicit val materializer: ActorMaterializer = ActorMaterializer()
@@ -37,9 +39,11 @@ object Main extends App with Config {
   import databaseService._
   import databaseService.driver.api._
 
- /* val setup = DBIO.seq(
-    // Create the tables, including primary and foreign keys
-    (track.schema).create)
-  val fin = db.run(setup)*/
-}
+  val myTest = TableQuery[MyTest]
 
+  val setup = DBIO.seq(
+    // Create the tables, including primary and foreign keys
+    (myTest.schema).create)
+  val fin = db.run(setup)
+
+}
