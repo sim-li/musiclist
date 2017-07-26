@@ -1,0 +1,4 @@
+https://github.com/AllThatSeries/react-native-streaming-audio-player
+
+https://github.com/tlenclos/react-native-audio-streaming/blob/master/README.md#other-rn-audio-projects
+

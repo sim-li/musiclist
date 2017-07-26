@@ -1,0 +1,3 @@
+https://github.com/Miserlou/SoundScrape
+
+https://github.com/rg3/youtube-dl
