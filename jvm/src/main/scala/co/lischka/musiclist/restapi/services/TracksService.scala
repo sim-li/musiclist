@@ -64,20 +64,4 @@ class TracksService(val databaseService: DatabaseService)(implicit executionCont
       _ == 1
     }
   }
-
-  //def insertTrackAtList(track: TrackEntity, musiclist: MusicListEntity): Future[Option[TrackMusicEntity]] = {
-
-    // Inspiration (probably not relevant, resolves Future[Option[...:
-    // val someEntry = musicListService.getListById(5L) map {       <--- repl. with createTrack...
-    // case Some(ml) => musicListService.updateList(ml.copy(permalink = "new_www.xyz.se"))
-    // case None => print("Abc")
-    // }
-
-    // ...createTrack()....map ( linkTracksWithMusicList(musicList.id, Seq(_.id) ) //should resolve Future[
-
-    // Create Track <- get back track id, put into Seq(trackId)
-    // Search MusicList <- get MusicList id
-    // linkTracksWithMusicList( ..., ... )
-
-  //}
 }

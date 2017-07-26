@@ -5,6 +5,7 @@ import co.lischka.musiclist.restapi.models.db.{MusicListEntityTable, TrackAtList
 import co.lischka.musiclist.restapi.utils.DatabaseService
 
 import scala.concurrent.{ExecutionContext, Future}
+import scala.util.{Failure, Success}
 
 class MusicListService(val databaseService: DatabaseService, tracksService: TracksService)(implicit executionContext: ExecutionContext)
   extends MusicListEntityTable with TrackAtListEntityTable with TrackEntityTable {
@@ -39,48 +40,29 @@ class MusicListService(val databaseService: DatabaseService, tracksService: Trac
 
 
   def getTracksAtList(permalink: String): Future[Seq[TrackEntity]] = {
-    for {
-      ml <- getMusicListByPermalink(permalink)
-      id <- ml.flatMap(m => m.id)
-      trackAtList <- getTrackAtListByMusicListId(id)
-    // Check if there's an alternative to get, it throws exceptions
-    } yield trackAtList.map(t => getTrackById(t.trackId.get))
+    ???
+//
+//
+//    val musicList = getMusicListByPermalink(permalink)
+//    musicList.map(ml => ml.map(m => {
+//      val id = m.id.get
+//      val trackAtLists: Future[Seq[TrackAtListEntity]] = getTrackAtListsByMusicListId(id)
+//      trackAtLists.flatMap((t: Seq[TrackAtListEntity]) => {
+//        t.map(t1 => {
+//          val track: Future[Option[TrackEntity]] = getTrackById(t1.trackId.get)
+//
+//        })
+//      })
+//    }))
+
   }
+
 
 
   def getMusicListByPermalink(permalink: String): Future[Option[MusicListEntity]] =
     db.run(musicList.filter(_.permalink === permalink).result.headOption)
 
-  def getTrackAtListByMusicListId(id: Long): Future[Option[TrackAtListEntity]] =
-    db.run(trackAtList.filter(_.musicListId === id).result.headOption)
+  def getTrackAtListsByMusicListId(id: Long): Future[Seq[TrackAtListEntity]] =
+    db.run(trackAtList.filter(_.musicListId === id).result)
 
-
-  /*def insertListAtTrack(musicListEntity: MusicListEntity, trackIds: Seq[Long]) = {
-    createList(musicListEntity) flatMap { list =>
-      linkMusicListWithTracks(list.id.get, trackIds)
-    }
-  }*/
-
-  def linkMusicListWithTracks(trackId: Long, musicListId: Seq[Long]) = {
-    existAllLists(musicListId) flatMap {
-      case true =>
-        db.run(trackAtList ++= musicListId.map((id: Long) => TrackAtListEntity(Some(trackId), Some[Long](id))))
-      case false => Future(None)
-    }
-  }
-
-  def existAllLists(lIds: Seq[Long]): Future[Boolean] = {
-    val seqOfFutures = lIds map {
-      existsList
-    }
-    Future.sequence(seqOfFutures) map { seq => seq.forall(_ == true) }
-  }
-
-  def existsList(lId: Long): Future[Boolean] = {
-    db.run {
-      musicList.filter(_.id === lId).length.result
-    } map {
-      _ == 1
-    }
-  }
 }

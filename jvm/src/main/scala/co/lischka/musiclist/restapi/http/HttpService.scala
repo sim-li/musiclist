@@ -10,7 +10,7 @@ import scala.concurrent.ExecutionContext
 
 class HttpService(usersService: UsersService,
                   authService: AuthService,
-                  searchService: SearchService,
+                  searchService: YoutubeSearchService,
                   tracksService: TracksService,
                   musicListService: MusicListService,
                   trackAtListService: TrackAtListService

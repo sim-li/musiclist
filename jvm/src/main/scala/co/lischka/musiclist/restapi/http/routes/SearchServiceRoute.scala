@@ -8,12 +8,12 @@ import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.server.PathMatchers.IntNumber
 import co.lischka.musiclist.restapi.http.SecurityDirectives
 import co.lischka.musiclist.restapi.models.{TrackEntity, UserEntityUpdate}
-import co.lischka.musiclist.restapi.services.{AuthService, SearchService, UsersService}
+import co.lischka.musiclist.restapi.services.{AuthService, YoutubeSearchService, UsersService}
 import io.circe.generic.auto._
 import io.circe.syntax._
 
 
-class SearchServiceRoute(val searchService: SearchService)(implicit executionContext: ExecutionContext) extends CirceSupport {
+class SearchServiceRoute(val searchService: YoutubeSearchService)(implicit executionContext: ExecutionContext) extends CirceSupport {
   val route = pathPrefix("results") {
     pathEndOrSingleSlash {
       get {

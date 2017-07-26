@@ -6,7 +6,7 @@ import akka.http.scaladsl.Http
 import akka.stream.ActorMaterializer
 import co.lischka.musiclist.restapi.http.HttpService
 import co.lischka.musiclist.restapi.models.{MusicListEntity, TrackEntity, TrackAtListEntity, UserEntity}
-import co.lischka.musiclist.restapi.services.{AuthService, MusicListService, SearchService, TrackAtListService, TracksService, UsersService}
+import co.lischka.musiclist.restapi.services.{AuthService, MusicListService, YoutubeSearchService, TrackAtListService, TracksService, UsersService}
 import co.lischka.musiclist.restapi.utils.{Config, DatabaseService, FlywayService}
 
 import scala.concurrent.{ExecutionContext, Future}
@@ -29,7 +29,7 @@ object Main extends App with Config {
   val usersService = new UsersService(databaseService)
   val authService = new AuthService(databaseService)(usersService)
 
-  val searchService = new SearchService()
+  val searchService = new YoutubeSearchService()
   val tracksService = new TracksService(databaseService)
   val musicListService = new MusicListService(databaseService, tracksService)
   val trackAtListService = new TrackAtListService(databaseService)
