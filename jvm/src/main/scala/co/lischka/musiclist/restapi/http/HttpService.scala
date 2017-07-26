@@ -23,7 +23,7 @@ class HttpService(usersService: UsersService,
   val authRouter = new AuthServiceRoute(authService)
   val searchRouter = new SearchServiceRoute(searchService)
   val trackRouter = new TracksServiceRoute(tracksService)
-  val musicListRouter = new MusicListServiceRoute(musicListService, tracksService)
+  val musicListRouter = new MusicListServiceRoute(musicListService, tracksService, trackAtListService)
 
   val routes =
     pathPrefix("v1") {

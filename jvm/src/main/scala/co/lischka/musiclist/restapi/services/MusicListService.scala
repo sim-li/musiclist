@@ -38,7 +38,7 @@ class MusicListService(val databaseService: DatabaseService, tracksService: Trac
   }
 
 
-  def getTracksAtList(permalink: String): Future[Seq[TrackEntity]] = {
+  /*def getTracksAtList(permalink: String): Future[Seq[TrackEntity]] = {
     for {
       ml <- getMusicListByPermalink(permalink)
       id <- ml.flatMap(m => m.id)
@@ -46,7 +46,7 @@ class MusicListService(val databaseService: DatabaseService, tracksService: Trac
     // Check if there's an alternative to get, it throws exceptions
     } yield trackAtList.map(t => getTrackById(t.trackId.get))
   }
-
+*/
 
   def getMusicListByPermalink(permalink: String): Future[Option[MusicListEntity]] =
     db.run(musicList.filter(_.permalink === permalink).result.headOption)

@@ -4,15 +4,16 @@ import akka.http.scaladsl.model.StatusCodes
 import akka.http.scaladsl.server.Directives._
 import de.heikoseeberger.akkahttpcirce.CirceSupport
 import co.lischka.musiclist.restapi.models.{MusicListEntity, TrackEntity}
-import co.lischka.musiclist.restapi.services.{MusicListService, TracksService}
+import co.lischka.musiclist.restapi.services.{MusicListService, TrackAtListService, TracksService}
 import io.circe.generic.auto._
 import io.circe.syntax._
 
 import scala.concurrent.ExecutionContext
 
-class MusicListServiceRoute(val musicListService: MusicListService, tracksService: TracksService)(implicit executionContext: ExecutionContext) extends CirceSupport {
+class MusicListServiceRoute(val musicListService: MusicListService, tracksService: TracksService, trackAtListService: TrackAtListService)(implicit executionContext: ExecutionContext) extends CirceSupport {
 
   import StatusCodes._
+  import trackAtListService._
   import musicListService._
   import tracksService._
 
@@ -23,19 +24,19 @@ class MusicListServiceRoute(val musicListService: MusicListService, tracksServic
       (path("musicList" / LongNumber) & get) { id =>
         complete(getListById(id).map(_.asJson))
       } ~
-     /* (path("musicList" / Segment) & get) { str =>
-        complete(getTracksAtList(str).map(_.asJson))
-      } ~*/
+      (path("musicList" / Segment) & get) { str =>
+        complete(getMusicListByPermalink(str).map(_.asJson))
+      } ~
       (path("musicList") & post) {
         entity(as[MusicListEntity]) { list =>
           complete(createList(list).map(_.asJson))
         }
       } ~
       /*pathPrefix("musicList") {
-        (path("track" / LongNumber) & get) { id =>
-          complete(getTrackById(id).map(_.asJson))
-        }
-      } ~*/
+      (path(LongNumber / "track" ) & get) { id =>
+        complete(getListById(id).map(_.asJson))
+      }
+    } ~*/
       (path("musicList") & put) {
         entity(as[MusicListEntity]) { list =>
           complete(updateList(list).map(_.asJson))
