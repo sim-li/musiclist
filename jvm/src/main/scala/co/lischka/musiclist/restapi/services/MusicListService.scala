@@ -3,7 +3,6 @@ package co.lischka.musiclist.restapi.services
 import co.lischka.musiclist.restapi.models.{MusicListEntity, TrackAtListEntity, TrackEntity}
 import co.lischka.musiclist.restapi.models.db.{MusicListEntityTable, TrackAtListEntityTable, TrackEntityTable}
 import co.lischka.musiclist.restapi.utils.DatabaseService
-
 import scala.concurrent.{ExecutionContext, Future}
 import scala.util.{Failure, Success}
 
@@ -54,9 +53,7 @@ class MusicListService(val databaseService: DatabaseService, tracksService: Trac
 //        })
 //      })
 //    }))
-
   }
-
 
 
   def getMusicListByPermalink(permalink: String): Future[Option[MusicListEntity]] =

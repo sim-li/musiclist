@@ -74,5 +74,4 @@ object Main extends App with Config {
   tracksService.insertTrackAtList(cremul, Seq(3L))
   musicListService.insertListAtTrack(list1, Seq(10L))
   musicListService.insertListAtTrack(list2, Seq(10L))*/
-
 }

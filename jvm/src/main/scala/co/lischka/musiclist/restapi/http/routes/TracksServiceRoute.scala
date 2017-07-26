@@ -22,11 +22,11 @@ class TracksServiceRoute(val tracksService: TracksService)(implicit executionCon
       (path("track" / LongNumber) & get) { id =>
         complete(getTrackById(id).map(_.asJson))
       } ~
-      (path("track") & post) {
+     /* (path("track") & post) {
         entity(as[TrackEntity]) { track =>
           complete(createTrack(track).map(_.asJson))
         }
-      } ~
+      } ~*/
       (path("track") & put) {
         entity(as[TrackEntity]) { track =>
           complete(updateTrack(track).map(_.asJson))
