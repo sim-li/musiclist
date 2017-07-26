@@ -21,7 +21,7 @@ class MusicListService(val databaseService: DatabaseService, tracksService: Trac
 
   def createList(muList: MusicListEntity): Future[MusicListEntity] = db.run(musicList returning musicList += muList)
 
-  def getListByPermalink(permalink: String): Future[Option[MusicListEntity]] = db.run(musicList.filter(_.permalink === permalink).result.headOption)
+
 
   def updateList(listUpdate: MusicListEntity): Future[Option[MusicListEntity]] = {
     listUpdate.id match {
@@ -36,13 +36,24 @@ class MusicListService(val databaseService: DatabaseService, tracksService: Trac
     }
   }
 
+
+
   def getTracksAtList(permalink: String): Future[Seq[TrackEntity]] = {
-    getListByPermalink(permalink) flatMap { muEntity =>
-      val tal: Future[TrackAtList] = db.run(trackAtList.filter(_.musicListId === muEntity.get.id))
-      tal.flatMap(l =>
-      getTrackById(l.trackId))
+    val ml = getMusicListByPermalink(permalink)
+    ml map { ml =>
+      getTrackAtListByMusicListId(ml.flatMap( m => m.id)) map  { tr =>
+
+        getTrackById(tr.map( t => t.trackId ))
+      }
+
     }
   }
+
+  def getMusicListByPermalink(permalink: String): Future[Option[MusicListEntity]] = db.run(musicList.filter(_.permalink === permalink).result.headOption)
+
+  def getTrackAtListByMusicListId(id: Long): Future[Option[TrackAtList]] = db.run(trackAtList.filter(_.musicListId === id).result.headOption)
+
+
   /*def insertListAtTrack(musicListEntity: MusicListEntity, trackIds: Seq[Long]) = {
     createList(musicListEntity) flatMap { list =>
       linkMusicListWithTracks(list.id.get, trackIds)
