@@ -16,6 +16,6 @@ trait UserEntityTable {
     def * = (id, username, password) <> ((UserEntity.apply _).tupled, UserEntity.unapply)
   }
 
-  protected val users = TableQuery[Users]
+  val users = TableQuery[Users]
 
 }
