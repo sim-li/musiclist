@@ -23,9 +23,9 @@ class MusicListServiceRoute(val musicListService: MusicListService, tracksServic
       (path("musicList" / LongNumber) & get) { id =>
         complete(getListById(id).map(_.asJson))
       } ~
-      (path("musicList" / Segment) & get) { str =>
+     /* (path("musicList" / Segment) & get) { str =>
         complete(getTracksAtList(str).map(_.asJson))
-      } ~
+      } ~*/
       (path("musicList") & post) {
         entity(as[MusicListEntity]) { list =>
           complete(createList(list).map(_.asJson))

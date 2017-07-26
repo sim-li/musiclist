@@ -3,7 +3,7 @@ name := "MusicList"
 scalaVersion in ThisBuild := "2.11.8"
 
 lazy val root = project.in(file(".")).
-  aggregate(musicListJS, musicListJVM).
+  aggregate(musicListJVM).
   settings(
     publish := {},
     publishLocal := {}
@@ -14,11 +14,13 @@ lazy val musicList = crossProject.in(file(".")).
     name := "musicList",
     version := "0.1-SNAPSHOT"
   ).
-  enablePlugins(ScalaJSBundlerPlugin).
+  //enablePlugins(ScalaJSBundlerPlugin).
+  /*
   jsSettings(
     scalaJSUseMainModuleInitializer := true,
     npmDependencies in Compile += "react-native-streaming-audio-player" -> "0.2.2"
   ).
+  */
   jvmSettings(
     libraryDependencies ++= {
       mainClass in(Compile, run) := Some("co.lischka.musiclist.restapi.Main")
@@ -53,4 +55,4 @@ lazy val musicList = crossProject.in(file(".")).
     })
 
 lazy val musicListJVM = musicList.jvm
-lazy val musicListJS = musicList.js
+/*lazy val musicListJS = musicList.js*/

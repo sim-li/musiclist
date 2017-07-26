@@ -31,7 +31,7 @@ object Main extends App with Config {
 
   val searchService = new SearchService()
   val tracksService = new TracksService(databaseService)
-  val musicListService = new MusicListService(databaseService)
+  val musicListService = new MusicListService(databaseService, tracksService)
   val trackAtListService = new TrackAtListService(databaseService)
   val httpService = new HttpService(usersService, authService, searchService, tracksService, musicListService, trackAtListService)
 

@@ -3,7 +3,6 @@ package co.lischka.musiclist.restapi.services
 import co.lischka.musiclist.restapi.models.{MusicListEntity, TrackAtListEntity, TrackEntity}
 import co.lischka.musiclist.restapi.models.db.{MusicListEntityTable, TrackAtListEntityTable, TrackEntityTable}
 import co.lischka.musiclist.restapi.utils.DatabaseService
-import co.lischka.musiclist.restapi.services.TracksService
 
 import scala.concurrent.{ExecutionContext, Future}
 
@@ -38,7 +37,7 @@ class MusicListService(val databaseService: DatabaseService, tracksService: Trac
 
 
 
-  def getTracksAtList(permalink: String): Future[Seq[TrackEntity]] = {
+  /*def getTracksAtList(permalink: String): Future[Seq[TrackEntity]] = {
     val ml = getMusicListByPermalink(permalink)
     ml map { ml =>
       getTrackAtListByMusicListId(ml.flatMap( m => m.id)) map  { tr =>
@@ -48,10 +47,10 @@ class MusicListService(val databaseService: DatabaseService, tracksService: Trac
 
     }
   }
+*/
+  //def getMusicListByPermalink(permalink: String): Future[Option[MusicListEntity]] = db.run(musicList.filter(_.permalink === permalink).result.headOption)
 
-  def getMusicListByPermalink(permalink: String): Future[Option[MusicListEntity]] = db.run(musicList.filter(_.permalink === permalink).result.headOption)
-
-  def getTrackAtListByMusicListId(id: Long): Future[Option[TrackAtList]] = db.run(trackAtList.filter(_.musicListId === id).result.headOption)
+  //def getTrackAtListByMusicListId(id: Long): Future[Option[TrackAtListEntity]] = db.run(trackAtList.filter(_.musicListId === id).result.headOption)
 
 
   /*def insertListAtTrack(musicListEntity: MusicListEntity, trackIds: Seq[Long]) = {
