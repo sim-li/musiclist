@@ -4,7 +4,6 @@ import co.lischka.musiclist.restapi.parsers.YoutubeParser
 import org.scalatest.FlatSpec
 
 class YoutubeParseSpec extends FlatSpec{
-
     "A YoutubeParser" should "parse a title" in {
         //Valid I
         val inp = s"""
@@ -34,6 +33,4 @@ class YoutubeParseSpec extends FlatSpec{
         val result = YoutubeParser.parseTracks(inp)
         assert(result(0). === 1)
     }
-
-
 }
