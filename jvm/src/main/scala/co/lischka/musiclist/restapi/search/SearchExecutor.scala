@@ -10,11 +10,11 @@ import akka.event.Logging
 
 
 object SearchExecutor {
-  def props()(implicit timeout: akka.util.Timeout
+  def props()(implicit timeout: akka.util.Timeout, materializer: ActorMaterializer
   ) = Props(new SearchExecutor())
 }
 
-class SearchExecutor()(implicit timeout: akka.util.Timeout
+class SearchExecutor()(implicit timeout: akka.util.Timeout, materializer: ActorMaterializer
 ) extends Actor {
   import context._
 
