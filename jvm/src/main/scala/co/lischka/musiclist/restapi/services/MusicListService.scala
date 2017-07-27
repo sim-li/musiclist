@@ -41,7 +41,7 @@ class MusicListService(val databaseService: DatabaseService, tracksService: Trac
   def getTracksAtList(permalink: String): Future[Seq[TrackEntity]] = {
     val join = for {
       ml <- musicList if ml.permalink === permalink
-    
+
       //filter(_.musicListId === ml.id)
 
       // Currently does not filter by musiclist
