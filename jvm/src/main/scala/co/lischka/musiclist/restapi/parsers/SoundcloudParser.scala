@@ -4,40 +4,38 @@ import akka.http.scaladsl.model.headers.LinkParams.title
 import co.lischka.musiclist.restapi.models.{TrackEntity, UserEntity}
 import io.circe.parser._
 import io.circe.optics.JsonPath._
+import cats.syntax.either._
+import co.lischka.musiclist.restapi.Main.doc
 import io.circe._
+import io.circe.parser._
 
 
 
 object SoundcloudParser {
-  def parseTracks(inp: String): List[TrackEntity]  = {
-    UserEntity(username="abc", password="def")
+  def parseTracks(json: String) = {
 
-
-    println("Input is")
-    println(inp)
-    parse(inp) match {
+    parse(json) match {
       case Left(failure) => List()
       case Right(json) => {
 
-        // videoId: items[0].id.videoId; items[0].id.kind=="youtube#video"
-        // title
-        // .description
+        val cursor: HCursor = doc.hcursor
 
-        // val _phoneNum = root.order.customer.contactDetails.phone.string
-        // _phoneNum: monocle.Optional[io.circe.Json,String] = monocle.POptional$$anon$1@129eba5a
 
-        //val phoneNum: Option[String] = _phoneNum.getOption(json)
+        val urlres: Decoder.Result[String] =
+          cursor.downField("uri").as[String]
 
-        val _id = root.items.index(0).id.videoId.string
+        val titleres: Decoder.Result[String] =
+          cursor.downField("title").as[String]
 
-        val id: Option[String] = _id.getOption(json)
+        val artistres: Decoder.Result[String] =
+          cursor.downField("title").as[String]
 
-        List(TrackEntity(
-          url=s"http://test.de/${id}",
-          title="My cool title",
-          artist="fdsa",
-          description="A description"
-        ))
+        val descriptionres:  Decoder.Result[String] =
+          cursor.downField("description").as[String]
+
+
+
+
 
       }
     }
