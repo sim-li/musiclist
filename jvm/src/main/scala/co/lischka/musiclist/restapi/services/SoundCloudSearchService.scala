@@ -18,7 +18,7 @@ class SoundCloudSearchService() (
     // Links have to look like this:
     // https://soundcloud.com/deniro_skemez/deniro-skemez-goin-off-prelude
     //
-    val soundCloudUri = s"xyz${title}"
+    val soundCloudUri = s"https://api-v2.soundcloud.com/search?q=${title}&client_id=JlZIsxg2hY5WnBgtn3jfS0UYCl0K8DOg"
 
     httpRequest(soundCloudUri).map(print _)
 
