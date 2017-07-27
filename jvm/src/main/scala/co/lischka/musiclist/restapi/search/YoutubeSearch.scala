@@ -24,6 +24,7 @@ class YoutubeSearch()(implicit timeout: akka.util.Timeout) extends Actor {
         id = Some(0),
         url = "http://abc",
         title = "Youtube Res",
+        artist="fdsa",
         description = "My cool description"
       )))
     }

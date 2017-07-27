@@ -8,9 +8,12 @@ import co.lischka.musiclist.restapi.http.HttpService
 import co.lischka.musiclist.restapi.models.{MusicListEntity, TrackEntity, TrackAtListEntity, UserEntity}
 import co.lischka.musiclist.restapi.services.{AuthService, MusicListService, YoutubeSearchService, TrackAtListService, TracksService, UsersService}
 import co.lischka.musiclist.restapi.utils.{Config, DatabaseService, FlywayService}
+import co.lischka.musiclist.restapi.parsers.SoundcloudParser
 
 import scala.concurrent.{ExecutionContext, Future}
 import scala.util.{Failure, Success}
+import cats.syntax.either._
+import io.circe._, io.circe.parser._
 
 object Main extends App with Config {
   implicit val actorSystem = ActorSystem()
@@ -82,4 +85,19 @@ object Main extends App with Config {
 
   musicListService.getTracksAtList("p1").foreach(print(_))
 
+
+  val rawJson: String = """
+{
+  "foo": "bar",
+  "baz": 123,
+  "list of stuff": [ 4, 5, 6 ]
+}
+"""
+
+  val parseResult = parse(rawJson)
+
+  parse(rawJson) match {
+    case Left(failure) => println("Invalid JSON :(")
+    case Right(json) => println("Yay, got some JSON!")
+  }
 }

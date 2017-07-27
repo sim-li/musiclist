@@ -4,12 +4,14 @@ import akka.http.scaladsl.model.headers.LinkParams.title
 import co.lischka.musiclist.restapi.models.{TrackEntity, UserEntity}
 import io.circe.parser._
 import io.circe.optics.JsonPath._
+import io.circe._
 
 
 
-object YoutubeParser {
+object SoundcloudParser {
   def parseTracks(inp: String): List[TrackEntity]  = {
     UserEntity(username="abc", password="def")
+
 
     println("Input is")
     println(inp)
@@ -33,7 +35,7 @@ object YoutubeParser {
         List(TrackEntity(
           url=s"http://test.de/${id}",
           title="My cool title",
-          artist="fvgdh",
+          artist="fdsa",
           description="A description"
         ))
 

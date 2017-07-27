@@ -26,6 +26,7 @@ class SoundCloudSearch(implicit timeout: akka.util.Timeout) extends Actor {
         id=Some(0),
         url="http://abc",
         title="Soundcloud Res",
+        artist="adele",
         description="My cool description"
       )))
     }
