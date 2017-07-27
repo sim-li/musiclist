@@ -43,7 +43,6 @@ class MusicListService(val databaseService: DatabaseService, tracksService: Trac
       ml <- musicList if ml.permalink === permalink
 
       //filter(_.musicListId === ml.id)
-
       // Currently does not filter by musiclist
       tAL <- trackAtList.map(_.trackId)
       tr <- tracks.filter(_.id === tAL)
