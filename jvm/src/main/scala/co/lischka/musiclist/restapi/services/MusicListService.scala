@@ -39,20 +39,17 @@ class MusicListService(val databaseService: DatabaseService, tracksService: Trac
 
 
   def getTracksAtList(permalink: String): Future[Seq[TrackEntity]] = {
-    ???
-//
-//
-//    val musicList = getMusicListByPermalink(permalink)
-//    musicList.map(ml => ml.map(m => {
-//      val id = m.id.get
-//      val trackAtLists: Future[Seq[TrackAtListEntity]] = getTrackAtListsByMusicListId(id)
-//      trackAtLists.flatMap((t: Seq[TrackAtListEntity]) => {
-//        t.map(t1 => {
-//          val track: Future[Option[TrackEntity]] = getTrackById(t1.trackId.get)
-//
-//        })
-//      })
-//    }))
+    val join = for {
+      ml <- musicList if ml.permalink === permalink
+    
+      //filter(_.musicListId === ml.id)
+
+      // Currently does not filter by musiclist
+      tAL <- trackAtList.map(_.trackId)
+      tr <- tracks.filter(_.id === tAL)
+    } yield tr
+    return db.run(join.result)
+
   }
 
 
