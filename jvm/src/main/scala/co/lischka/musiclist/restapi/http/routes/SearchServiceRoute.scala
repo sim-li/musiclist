@@ -27,11 +27,13 @@ class SearchServiceRoute(val searchService: YoutubeSearchService)(implicit execu
   val route = pathPrefix("results") {
     pathEndOrSingleSlash {
       get {
-        parameters("search_query") { (query: String) =>
-          implicit val askTimeout: Timeout = 3.seconds
-          val actor = system.actorOf(Props[SearchExecutor])
-          onSuccess((actor ? Search(query)).mapTo[Result]) { result =>
-            complete(result.data.map(_.asJson))
+        parameters("search_query") {
+          (query: String) => {
+            implicit val askTimeout: Timeout = 7.seconds
+            val actor = system.actorOf(SearchExecutor.props)
+            onSuccess((actor ? Search(query)).mapTo[Result]) { result =>
+              complete(result.data.map(_.asJson))
+            }
           }
         }
       }
